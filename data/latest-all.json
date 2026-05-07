@@ -6,7 +6,7 @@
         "clientName": "Supreme Tree Experts",
         "vertical": "tree-service",
         "weekOf": "2026-04-27",
-        "generatedAt": "2026-05-07T20:07:38.290Z",
+        "generatedAt": "2026-05-07T20:09:29.160Z",
         "budget": 450,
         "weeklyBudget": 103.62
       },
@@ -90,6 +90,16 @@
       ],
       "adGroups": [
         {
+          "name": "Ad group 1",
+          "campaign": "Local tree Services ads",
+          "clicks": 28,
+          "impressions": 1156,
+          "conversions": 3,
+          "spend": 139.488372,
+          "ctr": 2.422145328719723,
+          "cpc": 4.981727571428572
+        },
+        {
           "name": "Tree Planting & Transplanting",
           "campaign": "Lead Search Ads- April 26",
           "clicks": 0,
@@ -110,14 +120,24 @@
           "cpc": 0
         },
         {
-          "name": "Ad group 1",
-          "campaign": "Local tree Services ads",
-          "clicks": 28,
-          "impressions": 1156,
-          "conversions": 3,
-          "spend": 139.488372,
-          "ctr": 2.422145328719723,
-          "cpc": 4.981727571428572
+          "name": "Tree Trimming & Pruning",
+          "campaign": "Lead Search Ads- April 26",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
+        },
+        {
+          "name": "Stump Grinding and Removal",
+          "campaign": "Lead Search Ads- April 26",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
         },
         {
           "name": "Tree Removal",
@@ -132,26 +152,6 @@
         {
           "name": "Tree Trimming & Service",
           "campaign": "STE — Search — May 2026",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Tree Trimming & Pruning",
-          "campaign": "Lead Search Ads- April 26",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Stump Grinding and Removal",
-          "campaign": "Lead Search Ads- April 26",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
@@ -1205,7 +1205,7 @@
         "clientName": "Mega Roofing",
         "vertical": "roofing-repair",
         "weekOf": "2026-04-27",
-        "generatedAt": "2026-05-07T20:07:43.159Z",
+        "generatedAt": "2026-05-07T20:09:32.803Z",
         "budget": 450,
         "weeklyBudget": 103.62
       },
@@ -1240,27 +1240,7 @@
       "adGroups": [
         {
           "name": "Ad group 1",
-          "campaign": "Sales-Search-5 Doble",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Ad group 1",
           "campaign": "Megaroofing Doble ad 1",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Ad group 1",
-          "campaign": "Leads-Search-11phone calls july26 doble",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
@@ -1280,6 +1260,16 @@
         },
         {
           "name": "Ad group 1",
+          "campaign": "Sales-Search-5 Doble",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
+        },
+        {
+          "name": "Ad group 1",
           "campaign": "Sales-Search-7 hail storm area1",
           "clicks": 0,
           "impressions": 0,
@@ -1290,7 +1280,7 @@
         },
         {
           "name": "Ad group 1",
-          "campaign": "Search-13 aug 7",
+          "campaign": "Lead form ad doble",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
@@ -1300,7 +1290,17 @@
         },
         {
           "name": "Ad group 1",
-          "campaign": "Lead form ad doble",
+          "campaign": "Leads-Search-11phone calls july26 doble",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
+        },
+        {
+          "name": "Ad group 1",
+          "campaign": "Search-13 aug 7",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
@@ -1359,6 +1359,26 @@
           "cpc": 0
         },
         {
+          "name": "Ad group 1",
+          "campaign": "PHONE CALL NEW AD",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
+        },
+        {
+          "name": "Quality Roofing Services in St. Cloud, Florida",
+          "campaign": "Feb 19 Doble Phone Call Ad",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
+        },
+        {
           "name": "Roof Repair",
           "campaign": "Website Leads Mar026",
           "clicks": 0,
@@ -1371,16 +1391,6 @@
         {
           "name": "Cost / Estimate",
           "campaign": "Website Leads Mar026",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Quality Roofing Services in St. Cloud, Florida",
-          "campaign": "Feb 19 Doble Phone Call Ad",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
@@ -1411,16 +1421,6 @@
         {
           "name": "Insurance / Storm Damage",
           "campaign": "Website Leads Mar026",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Ad group 1",
-          "campaign": "PHONE CALL NEW AD",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
@@ -16801,7 +16801,7 @@
       "accountId": "1523727968790479",
       "accountName": "LocalEyes Pro — Lead Gen",
       "weekOf": "2026-04-27",
-      "generatedAt": "2026-05-07T20:07:45.339Z",
+      "generatedAt": "2026-05-07T20:09:36.036Z",
       "budget": 500,
       "weeklyBudget": 115.13
     },
