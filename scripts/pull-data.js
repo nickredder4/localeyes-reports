@@ -413,14 +413,13 @@ async function main() {
       const snap = await pullClient(c);
       snapshots.push(snap);
     } catch (err) {
-      // Google Ads API errors can be nested — extract the real message
-      const errMsg = err?.errors?.[0]?.message || err?.message || JSON.stringify(err);
+      // Google Ads API errors can be deeply nested — dump everything
+      const errMsg = err?.errors?.[0]?.message
+        || err?.message
+        || err?.response?.data?.error?.message
+        || (typeof err === "string" ? err : JSON.stringify(err, null, 2));
       console.error(`  [${c.name}] ERROR: ${errMsg}`);
-      if (err?.errors) {
-        for (const e of err.errors) {
-          console.error(`    Detail: ${JSON.stringify(e)}`);
-        }
-      }
+      console.error(`  [${c.name}] Full error dump:`, JSON.stringify(err, Object.getOwnPropertyNames(err || {}), 2));
       snapshots.push({ meta: { clientId: c.id, clientName: c.name, weekOf: weekLabel, error: errMsg } });
     }
   }
