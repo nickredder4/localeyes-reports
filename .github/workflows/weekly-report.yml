@@ -52,9 +52,9 @@ jobs:
         run: |
           git config user.name "LocalEyes Reports Bot"
           git config user.email "reports@localeyespro.com"
-          git pull --rebase origin main || true
           git add data/
           git diff --staged --quiet || git commit -m "data: weekly snapshot $(date +%Y-%m-%d)"
+          git pull --rebase origin main || true
           git push
 
       # Deploy to Cloudflare Pages
