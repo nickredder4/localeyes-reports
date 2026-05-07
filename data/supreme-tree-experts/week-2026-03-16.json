@@ -1,0 +1,302 @@
+{
+  "meta": {
+    "clientId": "supreme-tree-experts",
+    "clientName": "Supreme Tree Experts",
+    "vertical": "tree-service",
+    "weekOf": "2026-03-16",
+    "generatedAt": "2026-05-07T19:30:00.768Z",
+    "budget": 450,
+    "weeklyBudget": 103.62
+  },
+  "summary": {
+    "thisWeek": {
+      "spend": 106.69,
+      "clicks": 13,
+      "impressions": 216,
+      "conversions": 3,
+      "ctr": 6.02,
+      "cpc": 8.21,
+      "cpl": 35.56
+    },
+    "prevWeek": {
+      "spend": 119.49,
+      "clicks": 12,
+      "impressions": 225,
+      "conversions": 1,
+      "cpl": 119.49
+    },
+    "delta": {
+      "spend": -12.8,
+      "leads": 2,
+      "cpl": -83.93,
+      "spendPct": -10.71,
+      "leadsPct": 200,
+      "cplPct": -70.24
+    },
+    "pacing": 103
+  },
+  "daily": [
+    {
+      "date": "2026-03-16",
+      "spend": 14.42,
+      "clicks": 1,
+      "impressions": 14,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-17",
+      "spend": 16.63,
+      "clicks": 2,
+      "impressions": 43,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-18",
+      "spend": 12.46,
+      "clicks": 1,
+      "impressions": 20,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-19",
+      "spend": 15.71,
+      "clicks": 2,
+      "impressions": 35,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-20",
+      "spend": 16.58,
+      "clicks": 3,
+      "impressions": 45,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-21",
+      "spend": 16.33,
+      "clicks": 2,
+      "impressions": 32,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-22",
+      "spend": 14.56,
+      "clicks": 2,
+      "impressions": 27,
+      "conversions": 0
+    }
+  ],
+  "adGroups": [
+    {
+      "name": "Tree Removal",
+      "campaign": "STE — Search",
+      "clicks": 16,
+      "impressions": 285,
+      "conversions": 2,
+      "spend": 49.1,
+      "ctr": 3.19,
+      "cpc": 10.92
+    },
+    {
+      "name": "Tree Trimming",
+      "campaign": "STE — Search",
+      "clicks": 6,
+      "impressions": 322,
+      "conversions": 4,
+      "spend": 53.77,
+      "ctr": 5.28,
+      "cpc": 6.36
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "tree removal near me",
+      "matchType": "EXACT",
+      "adGroup": "Tree Removal",
+      "clicks": 4,
+      "impressions": 67,
+      "conversions": 0,
+      "spend": 37.4,
+      "ctr": 5.97,
+      "cpc": 9.35,
+      "cpl": null
+    },
+    {
+      "keyword": "tree removal service",
+      "matchType": "PHRASE",
+      "adGroup": "Tree Removal",
+      "clicks": 5,
+      "impressions": 65,
+      "conversions": 0,
+      "spend": 50.2,
+      "ctr": 7.69,
+      "cpc": 10.04,
+      "cpl": null
+    },
+    {
+      "keyword": "emergency tree removal",
+      "matchType": "EXACT",
+      "adGroup": "Tree Removal",
+      "clicks": 3,
+      "impressions": 42,
+      "conversions": 0,
+      "spend": 35.61,
+      "ctr": 7.14,
+      "cpc": 11.87,
+      "cpl": null
+    },
+    {
+      "keyword": "tree cutting service",
+      "matchType": "PHRASE",
+      "adGroup": "Tree Removal",
+      "clicks": 1,
+      "impressions": 29,
+      "conversions": 2,
+      "spend": 8.86,
+      "ctr": 3.45,
+      "cpc": 8.86,
+      "cpl": 4.43
+    },
+    {
+      "keyword": "tree trimming near me",
+      "matchType": "EXACT",
+      "adGroup": "Tree Trimming",
+      "clicks": 6,
+      "impressions": 91,
+      "conversions": 0,
+      "spend": 48.54,
+      "ctr": 6.59,
+      "cpc": 8.09,
+      "cpl": null
+    },
+    {
+      "keyword": "tree trimming service",
+      "matchType": "PHRASE",
+      "adGroup": "Tree Trimming",
+      "clicks": 5,
+      "impressions": 99,
+      "conversions": 0,
+      "spend": 28.5,
+      "ctr": 5.05,
+      "cpc": 5.7,
+      "cpl": null
+    },
+    {
+      "keyword": "tree pruning service",
+      "matchType": "EXACT",
+      "adGroup": "Tree Trimming",
+      "clicks": 1,
+      "impressions": 13,
+      "conversions": 0,
+      "spend": 8.77,
+      "ctr": 7.69,
+      "cpc": 8.77,
+      "cpl": null
+    }
+  ],
+  "searchTerms": {
+    "waste": [
+      {
+        "term": "tree removal cost estimator",
+        "clicks": 3,
+        "spend": 20.7,
+        "campaign": "STE — Search",
+        "adGroup": "Tree Removal"
+      },
+      {
+        "term": "free tree removal programs",
+        "clicks": 6,
+        "spend": 21.12,
+        "campaign": "STE — Search",
+        "adGroup": "Tree Removal"
+      },
+      {
+        "term": "tree service jobs hiring",
+        "clicks": 7,
+        "spend": 19.01,
+        "campaign": "STE — Search",
+        "adGroup": "Tree Removal"
+      },
+      {
+        "term": "how to remove tree stump diy",
+        "clicks": 3,
+        "spend": 22.71,
+        "campaign": "STE — Search",
+        "adGroup": "Tree Removal"
+      }
+    ],
+    "wastePct": 78.3,
+    "wasteSpend": 83.54
+  },
+  "ads": {
+    "disapproved": 0
+  },
+  "conversionTracking": {
+    "active": true,
+    "actions": [
+      {
+        "name": "Phone Calls",
+        "type": "CALL_FROM_ADS",
+        "conversions": 3
+      }
+    ]
+  },
+  "health": {
+    "score": 85,
+    "breakdown": {
+      "conversionTracking": 25,
+      "budgetPacing": 20,
+      "cpl": 20,
+      "searchTermWaste": 0,
+      "adApprovals": 10,
+      "negativeKeywords": 10
+    }
+  },
+  "alerts": {
+    "wasteTerms": [
+      {
+        "term": "tree removal cost estimator",
+        "clicks": 3,
+        "spend": 20.7,
+        "campaign": "STE — Search",
+        "adGroup": "Tree Removal"
+      },
+      {
+        "term": "free tree removal programs",
+        "clicks": 6,
+        "spend": 21.12,
+        "campaign": "STE — Search",
+        "adGroup": "Tree Removal"
+      },
+      {
+        "term": "tree service jobs hiring",
+        "clicks": 7,
+        "spend": 19.01,
+        "campaign": "STE — Search",
+        "adGroup": "Tree Removal"
+      },
+      {
+        "term": "how to remove tree stump diy",
+        "clicks": 3,
+        "spend": 22.71,
+        "campaign": "STE — Search",
+        "adGroup": "Tree Removal"
+      }
+    ],
+    "bidOpportunities": [
+      {
+        "keyword": "tree cutting service",
+        "matchType": "PHRASE",
+        "adGroup": "Tree Removal",
+        "clicks": 1,
+        "impressions": 29,
+        "conversions": 2,
+        "spend": 8.86,
+        "ctr": 3.45,
+        "cpc": 8.86,
+        "cpl": 4.43
+      }
+    ],
+    "underperformingAdGroups": []
+  }
+}

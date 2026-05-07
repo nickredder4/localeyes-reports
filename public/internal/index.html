@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LocalEyes Pro — Internal Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1923; color: #e0e0e0; line-height: 1.5; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+  .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #1e2d3d; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; }
+  .header h1 { font-size: 22px; color: #fff; }
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .header .date { color: #7a8a9e; font-size: 14px; }
+
+  /* Date Range Selector */
+  .date-range { display: flex; align-items: center; gap: 8px; }
+  .date-range label { font-size: 12px; color: #546778; text-transform: uppercase; letter-spacing: 0.5px; }
+  .date-range select, .date-range input[type="date"] {
+    background: #1a2733; color: #e0e0e0; border: 1px solid #1e2d3d; border-radius: 6px;
+    padding: 6px 10px; font-size: 13px; cursor: pointer; outline: none;
+  }
+  .date-range select:hover, .date-range input[type="date"]:hover { border-color: #2E75B6; }
+  .date-range select:focus, .date-range input[type="date"]:focus { border-color: #2E75B6; box-shadow: 0 0 0 2px rgba(46,117,182,0.2); }
+  .custom-range { display: none; align-items: center; gap: 6px; margin-top: 8px; }
+  .custom-range.visible { display: flex; }
+  .custom-range span { color: #546778; font-size: 12px; }
+
+  .tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+  .tab { padding: 8px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; font-weight: 500; background: #1a2733; color: #7a8a9e; border: 1px solid #1e2d3d; transition: all 0.2s; }
+  .tab:hover { background: #1e2d3d; color: #fff; }
+  .tab.active { background: #2E75B6; color: #fff; border-color: #2E75B6; }
+  .tab.meta-tab { border-color: #1877F2; }
+  .tab.meta-tab.active { background: #1877F2; border-color: #1877F2; }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .overview-grid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 24px; }
+  .overview-row { display: grid; grid-template-columns: 2fr repeat(5, 1fr) 80px; gap: 0; background: #1a2733; border-radius: 8px; padding: 16px 20px; align-items: center; }
+  .overview-row.header-row { background: transparent; padding: 8px 20px; color: #546778; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .overview-row .client-name { font-weight: 600; color: #fff; }
+  .overview-row .metric { text-align: right; font-size: 14px; }
+  .overview-row .health { text-align: center; font-size: 14px; font-weight: 600; }
+
+  .platform-badge { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 3px; margin-left: 8px; font-weight: 600; vertical-align: middle; }
+  .badge-google { background: rgba(66,133,244,0.2); color: #4285F4; }
+  .badge-meta { background: rgba(24,119,242,0.2); color: #1877F2; }
+
+  .up { color: #4caf50; }
+  .down { color: #ef5350; }
+  .neutral { color: #7a8a9e; }
+
+  .detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .detail-card { background: #1a2733; border-radius: 10px; padding: 20px; }
+  .detail-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: #546778; margin-bottom: 4px; }
+  .detail-card .value { font-size: 26px; font-weight: 700; color: #fff; }
+  .detail-card .sub { font-size: 12px; color: #7a8a9e; margin-top: 4px; }
+
+  .section { background: #1a2733; border-radius: 10px; padding: 24px; margin-bottom: 24px; }
+  .section h3 { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 16px; }
+
+  .chart-container { position: relative; height: 240px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; padding: 10px 12px; border-bottom: 1px solid #1e2d3d; color: #546778; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 10px 12px; border-bottom: 1px solid #141e28; }
+  tr:hover { background: #141e28; }
+
+  .alert-item { padding: 10px 14px; background: #141e28; border-radius: 6px; margin-bottom: 8px; font-size: 13px; border-left: 3px solid #E67E22; }
+  .alert-item.critical { border-left-color: #ef5350; }
+  .alert-item.good { border-left-color: #4caf50; }
+
+  .range-info { background: #141e28; border-radius: 6px; padding: 8px 14px; margin-bottom: 16px; font-size: 12px; color: #7a8a9e; display: flex; align-items: center; gap: 8px; }
+  .range-info .icon { font-size: 14px; }
+
+  @media (max-width: 768px) {
+    .overview-row { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .overview-row.header-row { display: none; }
+    .detail-grid { grid-template-columns: repeat(2, 1fr); }
+    .header { flex-direction: column; align-items: flex-start; }
+    .date-range { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>LocalEyes Pro &mdash; Agency Dashboard</h1>
+    <div class="header-right">
+      <div class="date-range">
+        <label>Range:</label>
+        <select id="dateRangeSelect" onchange="onRangeChange()">
+          <option value="1">This Week</option>
+          <option value="4" selected>Last 4 Weeks</option>
+          <option value="8">Last 8 Weeks</option>
+          <option value="12">Last 12 Weeks</option>
+          <option value="custom">Custom</option>
+        </select>
+      </div>
+      <div class="date">Week of 2026-05-04</div>
+    </div>
+  </div>
+  <div class="custom-range" id="customRange">
+    <label style="font-size:12px;color:#546778;">From:</label>
+    <input type="date" id="customStart" onchange="onCustomRangeChange()" />
+    <span>&mdash;</span>
+    <label style="font-size:12px;color:#546778;">To:</label>
+    <input type="date" id="customEnd" onchange="onCustomRangeChange()" />
+  </div>
+
+  <div id="rangeInfo" class="range-info" style="display:none;">
+    <span class="icon">&#128197;</span>
+    <span id="rangeInfoText"></span>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showPanel('overview')">Overview</div>
+    <div class="tab" onclick="showPanel('supreme-tree-experts')">Supreme Tree Experts <span class="platform-badge badge-google">GA</span></div>
+    <div class="tab" onclick="showPanel('mega-roofing')">Mega Roofing <span class="platform-badge badge-google">GA</span></div>
+    <div class="tab meta-tab" onclick="showPanel('meta-localeyespro')">LocalEyes Meta <span class="platform-badge badge-meta">META</span></div>
+  </div>
+
+  <!-- OVERVIEW PANEL -->
+  <div class="panel active" id="panel-overview">
+    <div class="overview-grid">
+      <div class="overview-row header-row">
+        <div>Account</div><div class="metric">Spend</div><div class="metric">Pacing</div><div class="metric">Leads</div><div class="metric">CPL</div><div class="metric">Trend</div><div class="health">Health</div>
+      </div>
+      <div class="overview-row">
+        <div class="client-name">Supreme Tree Experts <span class="platform-badge badge-google">GA</span></div>
+        <div class="metric">$98.48</div>
+        <div class="metric">95%</div>
+        <div class="metric">2</div>
+        <div class="metric">$49.24</div>
+        <div class="metric down">&#9660; -33%</div>
+        <div class="health">&#x1F7E2; 90</div>
+      </div>
+      <div class="overview-row">
+        <div class="client-name">Mega Roofing <span class="platform-badge badge-google">GA</span></div>
+        <div class="metric">$102.23</div>
+        <div class="metric">99%</div>
+        <div class="metric">1</div>
+        <div class="metric">$102.23</div>
+        <div class="metric neutral">&#8212; 0%</div>
+        <div class="health">&#x1F7E1; 65</div>
+      </div>
+      <div class="overview-row">
+        <div class="client-name">LocalEyes Lead Gen <span class="platform-badge badge-meta">META</span></div>
+        <div class="metric">$142.01</div>
+        <div class="metric">123%</div>
+        <div class="metric">2</div>
+        <div class="metric">$71.01</div>
+        <div class="metric up">&#9650; +100%</div>
+        <div class="health">&mdash;</div>
+      </div>
+    </div>
+
+    <!-- Agency totals -->
+    <div class="detail-grid">
+      <div class="detail-card">
+        <div class="label">Total Ad Spend</div>
+        <div class="value">$342.72</div>
+        <div class="sub">2 clients + agency Meta</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Client Leads (Google)</div>
+        <div class="value">3</div>
+        <div class="sub">across client accounts</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Agency Leads (Meta)</div>
+        <div class="value">2</div>
+        <div class="sub">tree service prospects</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Avg Client Health</div>
+        <div class="value">78</div>
+        <div class="sub">target: 85+</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLIENT DETAIL PANELS (Google Ads) -->
+  <div class="panel" id="panel-supreme-tree-experts">
+    <div class="detail-grid">
+      <div class="detail-card">
+        <div class="label">Leads</div>
+        <div class="value">2</div>
+        <div class="sub down">&#9660; -33% WoW</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Spend</div>
+        <div class="value">$98.48</div>
+        <div class="sub">95% of $103.62 weekly</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Cost Per Lead</div>
+        <div class="value">$49.24</div>
+        <div class="sub down">&#9650; +49% WoW</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">CTR</div>
+        <div class="value">6.28%</div>
+        <div class="sub">CPC: $6.57</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Health Score</div>
+        <div class="value">&#x1F7E2; 90/100</div>
+        <div class="sub">
+          T:25 P:20 C:20 W:15 A:0 N:10
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Trend</h3>
+      <div class="chart-container"><canvas id="chart-supreme-tree-experts"></canvas></div>
+    </div>
+
+    <div class="section">
+      <h3>Alerts &amp; Actions</h3>
+      <div class="alert-item">"tree removal cost estimator" &mdash; 4 clicks, $8.35, 0 conversions</div>
+      <div class="alert-item critical">1 disapproved ad(s)</div>
+      
+      
+      <div class="alert-item good">"tree removal service" CPL at $8.34 &mdash; bid increase opportunity</div>
+      <div class="alert-item good">"tree cutting service" CPL at $8.36 &mdash; bid increase opportunity</div>
+    </div>
+
+    <div class="section">
+      <h3>Keyword Performance</h3>
+      <table>
+        <thead><tr><th>Keyword</th><th>Match</th><th>Clicks</th><th>Conv</th><th>Spend</th><th>CPL</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>tree removal near me</td><td>EXACT</td><td>3</td>
+            <td>0</td><td>$26.25</td><td>—</td>
+          </tr>
+          <tr>
+            <td>tree removal service</td><td>PHRASE</td><td>1</td>
+            <td>1</td><td>$8.34</td><td>$8.34</td>
+          </tr>
+          <tr>
+            <td>emergency tree removal</td><td>EXACT</td><td>1</td>
+            <td>0</td><td>$9.17</td><td>—</td>
+          </tr>
+          <tr>
+            <td>tree cutting service</td><td>PHRASE</td><td>1</td>
+            <td>1</td><td>$8.36</td><td>$8.36</td>
+          </tr>
+          <tr>
+            <td>tree trimming near me</td><td>EXACT</td><td>8</td>
+            <td>0</td><td>$65.68</td><td>—</td>
+          </tr>
+          <tr>
+            <td>tree trimming service</td><td>PHRASE</td><td>3</td>
+            <td>0</td><td>$31.32</td><td>—</td>
+          </tr>
+          <tr>
+            <td>tree pruning service</td><td>EXACT</td><td>6</td>
+            <td>0</td><td>$29.46</td><td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="panel" id="panel-mega-roofing">
+    <div class="detail-grid">
+      <div class="detail-card">
+        <div class="label">Leads</div>
+        <div class="value">1</div>
+        <div class="sub neutral">&#8212; 0% WoW</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Spend</div>
+        <div class="value">$102.23</div>
+        <div class="sub">99% of $103.62 weekly</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Cost Per Lead</div>
+        <div class="value">$102.23</div>
+        <div class="sub neutral">&#8212; 0% WoW</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">CTR</div>
+        <div class="value">3.97%</div>
+        <div class="sub">CPC: $20.45</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Health Score</div>
+        <div class="value">&#x1F7E1; 65/100</div>
+        <div class="sub">
+          T:25 P:20 C:0 W:0 A:10 N:10
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Trend</h3>
+      <div class="chart-container"><canvas id="chart-mega-roofing"></canvas></div>
+    </div>
+
+    <div class="section">
+      <h3>Alerts &amp; Actions</h3>
+      <div class="alert-item">"roofing jobs hiring" &mdash; 5 clicks, $24.73, 0 conversions</div>
+      <div class="alert-item">"diy roof repair" &mdash; 4 clicks, $11.10, 0 conversions</div>
+      <div class="alert-item">"free roof inspection scam" &mdash; 7 clicks, $22.52, 0 conversions</div>
+      
+      
+      
+      
+    </div>
+
+    <div class="section">
+      <h3>Keyword Performance</h3>
+      <table>
+        <thead><tr><th>Keyword</th><th>Match</th><th>Clicks</th><th>Conv</th><th>Spend</th><th>CPL</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>roof repair near me</td><td>EXACT</td><td>1</td>
+            <td>0</td><td>$15.24</td><td>—</td>
+          </tr>
+          <tr>
+            <td>roof leak repair</td><td>EXACT</td><td>6</td>
+            <td>0</td><td>$170.10</td><td>—</td>
+          </tr>
+          <tr>
+            <td>roofing contractor</td><td>PHRASE</td><td>4</td>
+            <td>0</td><td>$135.44</td><td>—</td>
+          </tr>
+          <tr>
+            <td>emergency roof repair</td><td>EXACT</td><td>2</td>
+            <td>0</td><td>$29.76</td><td>—</td>
+          </tr>
+          <tr>
+            <td>roof repair service</td><td>PHRASE</td><td>1</td>
+            <td>0</td><td>$17.52</td><td>—</td>
+          </tr>
+          <tr>
+            <td>fix roof leak</td><td>PHRASE</td><td>4</td>
+            <td>1</td><td>$105.56</td><td>$105.56</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- META ADS PANEL -->
+  <div class="panel" id="panel-meta-localeyespro">
+    <div class="detail-grid">
+      <div class="detail-card">
+        <div class="label">Leads</div>
+        <div class="value">2</div>
+        <div class="sub up">&#9650; +100% WoW</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Spend</div>
+        <div class="value">$142.01</div>
+        <div class="sub">123% of $115.13 weekly</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Cost Per Lead</div>
+        <div class="value">$71.01</div>
+        <div class="sub up">&#9660; -54% WoW</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">CTR</div>
+        <div class="value">1.09%</div>
+        <div class="sub">CPC: $1.02</div>
+      </div>
+      <div class="detail-card">
+        <div class="label">Impressions</div>
+        <div class="value">12,754</div>
+        <div class="sub">139 clicks</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Trend</h3>
+      <div class="chart-container"><canvas id="chart-meta"></canvas></div>
+    </div>
+
+    <!-- Campaign Breakdown -->
+    <div class="section">
+      <h3>Campaign Performance</h3>
+      <table>
+        <thead><tr><th>Campaign</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>Leads</th><th>CPL</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Tree Service Owners — Lookalike</td><td>$64.56</td><td>3,221</td>
+            <td>25</td><td>4</td><td>$33.31</td>
+          </tr>
+          <tr>
+            <td>Tree Service Owners — Interest</td><td>$33.66</td><td>3,708</td>
+            <td>38</td><td>1</td><td>$21.72</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Ad Set Breakdown -->
+    <div class="section">
+      <h3>Ad Set Performance</h3>
+      <table>
+        <thead><tr><th>Ad Set</th><th>Campaign</th><th>Spend</th><th>Clicks</th><th>Leads</th><th>CPL</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>LAL 1% — US Wide</td><td style="color:#546778;font-size:12px">Tree Service Owners — Lookalike</td><td>$30.29</td>
+            <td>25</td><td>3</td><td>$23.15</td>
+          </tr>
+          <tr>
+            <td>LAL 3% — US Wide</td><td style="color:#546778;font-size:12px">Tree Service Owners — Lookalike</td><td>$29.59</td>
+            <td>16</td><td>1</td><td>$47.55</td>
+          </tr>
+          <tr>
+            <td>Interest — Arborist + Landscaping</td><td style="color:#546778;font-size:12px">Tree Service Owners — Interest</td><td>$15.53</td>
+            <td>17</td><td>2</td><td>$29.74</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Ad Breakdown -->
+    <div class="section">
+      <h3>Ad Performance</h3>
+      <table>
+        <thead><tr><th>Ad</th><th>Ad Set</th><th>Spend</th><th>Clicks</th><th>Leads</th><th>CPL</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Video — Before/After Tree Job</td><td style="color:#546778;font-size:12px">LAL 1% — US Wide</td><td>$24.79</td>
+            <td>8</td><td>2</td><td>$38.97</td>
+          </tr>
+          <tr>
+            <td>Image — Growth Stats</td><td style="color:#546778;font-size:12px">LAL 1% — US Wide</td><td>$12.59</td>
+            <td>7</td><td>1</td><td>$49.50</td>
+          </tr>
+          <tr>
+            <td>Carousel — Case Studies</td><td style="color:#546778;font-size:12px">Interest — Arborist + Landscaping</td><td>$8.61</td>
+            <td>9</td><td>0</td><td>$47.21</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Daily Breakdown -->
+    <div class="section">
+      <h3>Daily Breakdown</h3>
+      <table>
+        <thead><tr><th>Date</th><th>Spend</th><th>Impressions</th><th>Clicks</th><th>Leads</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>2026-05-04</td><td>$15.55</td><td>1,061</td>
+            <td>8</td><td>0</td>
+          </tr>
+          <tr>
+            <td>2026-05-05</td><td>$22.08</td><td>2,331</td>
+            <td>17</td><td>0</td>
+          </tr>
+          <tr>
+            <td>2026-05-06</td><td>$22.22</td><td>2,478</td>
+            <td>30</td><td>0</td>
+          </tr>
+          <tr>
+            <td>2026-05-07</td><td>$21.13</td><td>2,012</td>
+            <td>9</td><td>0</td>
+          </tr>
+          <tr>
+            <td>2026-05-08</td><td>$17.49</td><td>1,943</td>
+            <td>24</td><td>0</td>
+          </tr>
+          <tr>
+            <td>2026-05-09</td><td>$20.28</td><td>965</td>
+            <td>30</td><td>0</td>
+          </tr>
+          <tr>
+            <td>2026-05-10</td><td>$23.26</td><td>1,964</td>
+            <td>21</td><td>0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── Historical data (embedded at build time) ──
+const ALL_HISTORY = {"supreme-tree-experts":[{"weekOf":"2026-02-16","spend":96.95,"leads":0,"cpl":0,"ctr":6.19,"cpc":7.46,"health":75},{"weekOf":"2026-02-23","spend":103.32,"leads":1,"cpl":103.32,"ctr":6.28,"cpc":7.38,"health":75},{"weekOf":"2026-03-02","spend":98.17,"leads":3,"cpl":32.72,"ctr":5.42,"cpc":6.14,"health":85},{"weekOf":"2026-03-09","spend":96.6,"leads":1,"cpl":96.6,"ctr":6.05,"cpc":7.43,"health":65},{"weekOf":"2026-03-16","spend":106.69,"leads":3,"cpl":35.56,"ctr":6.02,"cpc":8.21,"health":85},{"weekOf":"2026-03-23","spend":91.32,"leads":3,"cpl":30.44,"ctr":5.74,"cpc":7.61,"health":77},{"weekOf":"2026-03-30","spend":102.26,"leads":2,"cpl":51.13,"ctr":5.49,"cpc":10.23,"health":85},{"weekOf":"2026-04-06","spend":100.58,"leads":1,"cpl":100.58,"ctr":5.88,"cpc":12.57,"health":65},{"weekOf":"2026-04-13","spend":99.95,"leads":2,"cpl":49.98,"ctr":6.44,"cpc":7.69,"health":85},{"weekOf":"2026-04-20","spend":100.59,"leads":1,"cpl":100.59,"ctr":5.58,"cpc":9.14,"health":65},{"weekOf":"2026-04-27","spend":98.89,"leads":2,"cpl":49.45,"ctr":6.47,"cpc":5.49,"health":95},{"weekOf":"2026-05-04","spend":98.48,"leads":2,"cpl":49.24,"ctr":6.28,"cpc":6.57,"health":90}],"mega-roofing":[{"weekOf":"2026-02-16","spend":102.45,"leads":0,"cpl":0,"ctr":4.35,"cpc":20.49,"health":85},{"weekOf":"2026-02-23","spend":101.91,"leads":2,"cpl":50.96,"ctr":4,"cpc":25.48,"health":85},{"weekOf":"2026-03-02","spend":109.11,"leads":1,"cpl":109.11,"ctr":3.95,"cpc":18.18,"health":80},{"weekOf":"2026-03-09","spend":104.37,"leads":2,"cpl":52.18,"ctr":3.66,"cpc":17.4,"health":85},{"weekOf":"2026-03-16","spend":103.06,"leads":2,"cpl":51.53,"ctr":4.27,"cpc":14.72,"health":95},{"weekOf":"2026-03-23","spend":103.42,"leads":1,"cpl":103.42,"ctr":3.7,"cpc":25.86,"health":65},{"weekOf":"2026-03-30","spend":98.85,"leads":1,"cpl":98.85,"ctr":3.47,"cpc":16.48,"health":65},{"weekOf":"2026-04-06","spend":96.84,"leads":3,"cpl":32.28,"ctr":4.35,"cpc":32.28,"health":85},{"weekOf":"2026-04-13","spend":102.48,"leads":3,"cpl":34.16,"ctr":3.97,"cpc":17.08,"health":85},{"weekOf":"2026-04-20","spend":101.25,"leads":2,"cpl":50.63,"ctr":4.13,"cpc":20.25,"health":85},{"weekOf":"2026-04-27","spend":106.23,"leads":2,"cpl":53.11,"ctr":3.9,"cpc":17.7,"health":90},{"weekOf":"2026-05-04","spend":102.23,"leads":1,"cpl":102.23,"ctr":3.97,"cpc":20.45,"health":65}]};
+
+const META_HISTORY = [{"weekOf":"2026-02-16","spend":160.25,"leads":4,"cpl":40.06,"ctr":0.0123,"cpc":0.99},{"weekOf":"2026-02-23","spend":156.9,"leads":5,"cpl":31.38,"ctr":0.014499999999999999,"cpc":0.88},{"weekOf":"2026-03-02","spend":152.04,"leads":1,"cpl":152.04,"ctr":0.011200000000000002,"cpc":1.21},{"weekOf":"2026-03-09","spend":162.56,"leads":3,"cpl":54.19,"ctr":0.0129,"cpc":0.89},{"weekOf":"2026-03-16","spend":171.91,"leads":3,"cpl":57.3,"ctr":0.0132,"cpc":1.09},{"weekOf":"2026-03-23","spend":146.91,"leads":13,"cpl":11.3,"ctr":0.011399999999999999,"cpc":1.07},{"weekOf":"2026-03-30","spend":148.99,"leads":1,"cpl":148.99,"ctr":0.0121,"cpc":0.99},{"weekOf":"2026-04-06","spend":148.81,"leads":5,"cpl":29.76,"ctr":0.010700000000000001,"cpc":0.99},{"weekOf":"2026-04-13","spend":184.89,"leads":4,"cpl":46.22,"ctr":0.0127,"cpc":0.99},{"weekOf":"2026-04-20","spend":155.57,"leads":7,"cpl":22.22,"ctr":0.0087,"cpc":1.38},{"weekOf":"2026-04-27","spend":164.31,"leads":4,"cpl":41.08,"ctr":0.0124,"cpc":1.3},{"weekOf":"2026-05-04","spend":142.01,"leads":2,"cpl":71.01,"ctr":0.0109,"cpc":1.02}];
+
+// ── Chart instances ──
+const charts = {};
+
+function destroyCharts() {
+  for (const [id, chart] of Object.entries(charts)) {
+    chart.destroy();
+    delete charts[id];
+  }
+}
+
+function buildCharts(weekCount) {
+  destroyCharts();
+
+  // Google Ads client charts
+  (function() {
+    const el = document.getElementById('chart-supreme-tree-experts');
+    if (!el) return;
+    const hist = (ALL_HISTORY['supreme-tree-experts'] || []).slice(-weekCount);
+    const ctx = el.getContext('2d');
+    charts['supreme-tree-experts'] = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: hist.map(h => h.weekOf),
+        datasets: [
+          { label: 'Leads', data: hist.map(h => h.leads), borderColor: '#4caf50', backgroundColor: 'rgba(76,175,80,0.1)', fill: true, tension: 0.3, yAxisID: 'y' },
+          { label: 'CPL', data: hist.map(h => h.cpl), borderColor: '#E67E22', borderDash: [5,5], fill: false, tension: 0.3, yAxisID: 'y1' },
+          { label: 'Health', data: hist.map(h => h.health), borderColor: '#2E75B6', borderDash: [2,2], fill: false, tension: 0.3, yAxisID: 'y2', hidden: true },
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { intersect: false, mode: 'index' },
+        plugins: { legend: { position: 'bottom', labels: { color: '#7a8a9e' } } },
+        scales: {
+          x: { ticks: { color: '#546778' }, grid: { color: '#1e2d3d' } },
+          y: { beginAtZero: true, title: { display: true, text: 'Leads', color: '#7a8a9e' }, position: 'left', ticks: { color: '#546778' }, grid: { color: '#1e2d3d' } },
+          y1: { beginAtZero: true, title: { display: true, text: 'CPL ($)', color: '#7a8a9e' }, position: 'right', ticks: { color: '#546778' }, grid: { drawOnChartArea: false } },
+          y2: { display: false, min: 0, max: 100 },
+        }
+      }
+    });
+  })();
+  (function() {
+    const el = document.getElementById('chart-mega-roofing');
+    if (!el) return;
+    const hist = (ALL_HISTORY['mega-roofing'] || []).slice(-weekCount);
+    const ctx = el.getContext('2d');
+    charts['mega-roofing'] = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: hist.map(h => h.weekOf),
+        datasets: [
+          { label: 'Leads', data: hist.map(h => h.leads), borderColor: '#4caf50', backgroundColor: 'rgba(76,175,80,0.1)', fill: true, tension: 0.3, yAxisID: 'y' },
+          { label: 'CPL', data: hist.map(h => h.cpl), borderColor: '#E67E22', borderDash: [5,5], fill: false, tension: 0.3, yAxisID: 'y1' },
+          { label: 'Health', data: hist.map(h => h.health), borderColor: '#2E75B6', borderDash: [2,2], fill: false, tension: 0.3, yAxisID: 'y2', hidden: true },
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { intersect: false, mode: 'index' },
+        plugins: { legend: { position: 'bottom', labels: { color: '#7a8a9e' } } },
+        scales: {
+          x: { ticks: { color: '#546778' }, grid: { color: '#1e2d3d' } },
+          y: { beginAtZero: true, title: { display: true, text: 'Leads', color: '#7a8a9e' }, position: 'left', ticks: { color: '#546778' }, grid: { color: '#1e2d3d' } },
+          y1: { beginAtZero: true, title: { display: true, text: 'CPL ($)', color: '#7a8a9e' }, position: 'right', ticks: { color: '#546778' }, grid: { drawOnChartArea: false } },
+          y2: { display: false, min: 0, max: 100 },
+        }
+      }
+    });
+  })();
+
+  // Meta chart
+  (function() {
+    const el = document.getElementById('chart-meta');
+    if (!el) return;
+    const hist = META_HISTORY.slice(-weekCount);
+    const ctx = el.getContext('2d');
+    charts['meta'] = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: hist.map(h => h.weekOf),
+        datasets: [
+          { label: 'Leads', data: hist.map(h => h.leads), borderColor: '#1877F2', backgroundColor: 'rgba(24,119,242,0.1)', fill: true, tension: 0.3, yAxisID: 'y' },
+          { label: 'CPL', data: hist.map(h => h.cpl), borderColor: '#E67E22', borderDash: [5,5], fill: false, tension: 0.3, yAxisID: 'y1' },
+          { label: 'Spend', data: hist.map(h => h.spend), borderColor: '#4caf50', borderDash: [2,2], fill: false, tension: 0.3, yAxisID: 'y1', hidden: true },
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { intersect: false, mode: 'index' },
+        plugins: { legend: { position: 'bottom', labels: { color: '#7a8a9e' } } },
+        scales: {
+          x: { ticks: { color: '#546778' }, grid: { color: '#1e2d3d' } },
+          y: { beginAtZero: true, title: { display: true, text: 'Leads', color: '#7a8a9e' }, position: 'left', ticks: { color: '#546778' }, grid: { color: '#1e2d3d' } },
+          y1: { beginAtZero: true, title: { display: true, text: '$ Amount', color: '#7a8a9e' }, position: 'right', ticks: { color: '#546778' }, grid: { drawOnChartArea: false } },
+        }
+      }
+    });
+  })();
+}
+
+function onRangeChange() {
+  const sel = document.getElementById('dateRangeSelect');
+  const customEl = document.getElementById('customRange');
+  const rangeInfo = document.getElementById('rangeInfo');
+
+  if (sel.value === 'custom') {
+    customEl.classList.add('visible');
+    return;
+  }
+  customEl.classList.remove('visible');
+
+  const weeks = parseInt(sel.value);
+  buildCharts(weeks);
+
+  if (weeks === 1) {
+    rangeInfo.style.display = 'none';
+  } else {
+    rangeInfo.style.display = 'flex';
+    document.getElementById('rangeInfoText').textContent = 'Showing trend data for the last ' + weeks + ' weeks. Scorecards show the most recent week.';
+  }
+}
+
+function onCustomRangeChange() {
+  const start = document.getElementById('customStart').value;
+  const end = document.getElementById('customEnd').value;
+  if (!start || !end) return;
+
+  // Filter history to matching date range
+  const allWeeks = Object.values(ALL_HISTORY)[0]?.map(h => h.weekOf) || META_HISTORY.map(h => h.weekOf);
+  const filtered = allWeeks.filter(w => w >= start && w <= end);
+  const weekCount = filtered.length || 1;
+  buildCharts(weekCount);
+
+  const rangeInfo = document.getElementById('rangeInfo');
+  rangeInfo.style.display = 'flex';
+  document.getElementById('rangeInfoText').textContent = 'Showing ' + weekCount + ' week(s) from ' + start + ' to ' + end + '. Scorecards show the most recent week.';
+}
+
+function showPanel(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  event.target.closest('.tab').classList.add('active');
+}
+
+// Initial render
+buildCharts(4);
+</script>
+</body>
+</html>

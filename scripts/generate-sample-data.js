@@ -224,20 +224,112 @@ function computeHealth(trackingActive, pacing, cpl, benchmarks, wastePct, disapp
   return { score, breakdown };
 }
 
+// Meta sample data
+function generateMetaWeek(weekDate, weekNum) {
+  const weekLabel = fmt(weekDate);
+  const metaConfig = CONFIG.meta || { budget: 500, benchmarks: { cplLow: 15, cplHigh: 50 } };
+  const weeklyBudget = (metaConfig.budget / 30.4) * 7;
+
+  const daily = [];
+  let totalSpend = 0, totalClicks = 0, totalImpressions = 0, totalLeads = 0;
+
+  for (let d = 0; d < 7; d++) {
+    const date = new Date(weekDate);
+    date.setDate(date.getDate() + d);
+    const spend = rand(15, 30);
+    const impressions = randInt(800, 2500);
+    const clicks = randInt(8, 35);
+    const leads = Math.random() < 0.5 ? randInt(0, 3) : 0;
+
+    daily.push({ date: fmt(date), spend: Math.round(spend * 100) / 100, impressions, clicks, leads });
+    totalSpend += spend;
+    totalImpressions += impressions;
+    totalClicks += clicks;
+    totalLeads += leads;
+  }
+  if (totalLeads === 0 && weekNum > 1) totalLeads = randInt(1, 4);
+
+  const thisWeek = {
+    spend: Math.round(totalSpend * 100) / 100,
+    impressions: totalImpressions,
+    clicks: totalClicks,
+    ctr: totalImpressions > 0 ? Math.round(totalClicks / totalImpressions * 10000) / 100 / 100 : 0,
+    cpc: totalClicks > 0 ? Math.round(totalSpend / totalClicks * 100) / 100 : 0,
+    leads: totalLeads,
+    cpl: totalLeads > 0 ? Math.round(totalSpend / totalLeads * 100) / 100 : 0,
+  };
+
+  const prevLeads = Math.max(0, totalLeads + randInt(-2, 2));
+  const prevSpend = totalSpend * rand(0.85, 1.15);
+  const prevWeek = {
+    spend: Math.round(prevSpend * 100) / 100,
+    impressions: Math.round(totalImpressions * rand(0.85, 1.15)),
+    clicks: Math.round(totalClicks * rand(0.85, 1.15)),
+    leads: prevLeads,
+    cpl: prevLeads > 0 ? Math.round(prevSpend / prevLeads * 100) / 100 : 0,
+  };
+
+  const delta = {
+    spend: Math.round((thisWeek.spend - prevWeek.spend) * 100) / 100,
+    leads: thisWeek.leads - prevWeek.leads,
+    cpl: Math.round((thisWeek.cpl - prevWeek.cpl) * 100) / 100,
+    spendPct: prevWeek.spend > 0 ? Math.round((thisWeek.spend - prevWeek.spend) / prevWeek.spend * 10000) / 100 : 0,
+    leadsPct: prevWeek.leads > 0 ? Math.round((thisWeek.leads - prevWeek.leads) / prevWeek.leads * 10000) / 100 : 0,
+    cplPct: prevWeek.cpl > 0 ? Math.round((thisWeek.cpl - prevWeek.cpl) / prevWeek.cpl * 10000) / 100 : 0,
+  };
+
+  const pacing = Math.round(thisWeek.spend / weeklyBudget * 100);
+
+  const campaigns = [
+    { name: "Tree Service Owners — Lookalike", id: "120001", spend: rand(40, 80), impressions: randInt(2000, 5000), clicks: randInt(20, 60), leads: randInt(1, 5), cpl: rand(15, 40) },
+    { name: "Tree Service Owners — Interest", id: "120002", spend: rand(30, 60), impressions: randInt(1500, 4000), clicks: randInt(15, 45), leads: randInt(0, 3), cpl: rand(20, 50) },
+  ];
+
+  const adsets = [
+    { name: "LAL 1% — US Wide", id: "130001", campaign: campaigns[0].name, spend: rand(20, 40), impressions: randInt(1000, 2500), clicks: randInt(10, 30), leads: randInt(0, 3), cpl: rand(15, 45) },
+    { name: "LAL 3% — US Wide", id: "130002", campaign: campaigns[0].name, spend: rand(15, 30), impressions: randInt(800, 2000), clicks: randInt(8, 25), leads: randInt(0, 2), cpl: rand(20, 50) },
+    { name: "Interest — Arborist + Landscaping", id: "130003", campaign: campaigns[1].name, spend: rand(15, 30), impressions: randInt(800, 2000), clicks: randInt(8, 20), leads: randInt(0, 2), cpl: rand(20, 55) },
+  ];
+
+  const ads = [
+    { name: "Video — Before/After Tree Job", id: "140001", adset: adsets[0].name, campaign: campaigns[0].name, spend: rand(10, 25), impressions: randInt(500, 1500), clicks: randInt(5, 15), leads: randInt(0, 2), cpl: rand(15, 50) },
+    { name: "Image — Growth Stats", id: "140002", adset: adsets[0].name, campaign: campaigns[0].name, spend: rand(8, 20), impressions: randInt(400, 1200), clicks: randInt(4, 12), leads: randInt(0, 2), cpl: rand(18, 55) },
+    { name: "Carousel — Case Studies", id: "140003", adset: adsets[2].name, campaign: campaigns[1].name, spend: rand(8, 18), impressions: randInt(300, 1000), clicks: randInt(3, 10), leads: randInt(0, 1), cpl: rand(20, 60) },
+  ];
+
+  return {
+    meta: {
+      platform: "meta",
+      accountId: metaConfig.accountId || "1523727968790479",
+      accountName: "LocalEyes Pro — Lead Gen",
+      weekOf: weekLabel,
+      generatedAt: new Date().toISOString(),
+      budget: metaConfig.budget,
+      weeklyBudget: Math.round(weeklyBudget * 100) / 100,
+    },
+    summary: { thisWeek, prevWeek, delta, pacing },
+    daily,
+    campaigns,
+    adsets,
+    ads,
+  };
+}
+
 // Main
 function main() {
-  console.log("\nGenerating 8 weeks of sample data...\n");
+  console.log("\nGenerating 12 weeks of sample data...\n");
 
   const allLatest = [];
+  let metaLatest = null;
 
   for (const client of CONFIG.clients) {
     const dir = path.join(ROOT, "data", client.id);
     fs.mkdirSync(dir, { recursive: true });
 
-    for (let w = 7; w >= 0; w--) {
+    for (let w = 11; w >= 0; w--) {
       const weekDate = new Date();
-      weekDate.setDate(weekDate.getDate() - (w * 7) - weekDate.getDay() + 1); // Monday
-      const snap = generateWeek(client, weekDate, 8 - w);
+      weekDate.setDate(weekDate.getDate() - (w * 7) - weekDate.getDay() + 1);
+      const snap = generateWeek(client, weekDate, 12 - w);
       const filePath = path.join(dir, `week-${snap.meta.weekOf}.json`);
       fs.writeFileSync(filePath, JSON.stringify(snap, null, 2));
       console.log(`  [${client.name}] week-${snap.meta.weekOf}.json`);
@@ -249,7 +341,26 @@ function main() {
     }
   }
 
-  fs.writeFileSync(path.join(ROOT, "data", "latest-all.json"), JSON.stringify(allLatest, null, 2));
+  // Generate Meta sample data
+  const metaDir = path.join(ROOT, "data", "meta-localeyespro");
+  fs.mkdirSync(metaDir, { recursive: true });
+
+  for (let w = 11; w >= 0; w--) {
+    const weekDate = new Date();
+    weekDate.setDate(weekDate.getDate() - (w * 7) - weekDate.getDay() + 1);
+    const snap = generateMetaWeek(weekDate, 12 - w);
+    fs.writeFileSync(path.join(metaDir, `week-${snap.meta.weekOf}.json`), JSON.stringify(snap, null, 2));
+    console.log(`  [LocalEyes Meta] week-${snap.meta.weekOf}.json`);
+
+    if (w === 0) {
+      fs.writeFileSync(path.join(metaDir, "latest.json"), JSON.stringify(snap, null, 2));
+      metaLatest = snap;
+    }
+  }
+
+  // New combined format: { googleAds: [...], meta: {...} }
+  const combined = { googleAds: allLatest, meta: metaLatest };
+  fs.writeFileSync(path.join(ROOT, "data", "latest-all.json"), JSON.stringify(combined, null, 2));
   console.log("\nSample data generated. Run: npm run build && npm run dev\n");
 }
 

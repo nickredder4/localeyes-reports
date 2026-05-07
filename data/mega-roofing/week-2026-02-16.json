@@ -3,86 +3,86 @@
     "clientId": "mega-roofing",
     "clientName": "Mega Roofing",
     "vertical": "roofing-repair",
-    "weekOf": "2026-04-27",
-    "generatedAt": "2026-05-07T19:30:00.772Z",
+    "weekOf": "2026-02-16",
+    "generatedAt": "2026-05-07T19:30:00.770Z",
     "budget": 450,
     "weeklyBudget": 103.62
   },
   "summary": {
     "thisWeek": {
-      "spend": 106.23,
-      "clicks": 6,
-      "impressions": 154,
-      "conversions": 2,
-      "ctr": 3.9,
-      "cpc": 17.7,
-      "cpl": 53.11
+      "spend": 102.45,
+      "clicks": 5,
+      "impressions": 115,
+      "conversions": 0,
+      "ctr": 4.35,
+      "cpc": 20.49,
+      "cpl": 0
     },
     "prevWeek": {
-      "spend": 108.35,
-      "clicks": 5,
-      "impressions": 165,
+      "spend": 102.45,
+      "clicks": 6,
+      "impressions": 127,
       "conversions": 0,
       "cpl": 0
     },
     "delta": {
-      "spend": -2.12,
-      "leads": 2,
-      "cpl": 53.11,
-      "spendPct": -1.96,
+      "spend": 0,
+      "leads": 0,
+      "cpl": 0,
+      "spendPct": 0,
       "leadsPct": 0,
       "cplPct": 0
     },
-    "pacing": 103
+    "pacing": 99
   },
   "daily": [
     {
-      "date": "2026-04-27",
-      "spend": 16.15,
+      "date": "2026-02-16",
+      "spend": 16.33,
+      "clicks": 1,
+      "impressions": 21,
+      "conversions": 0
+    },
+    {
+      "date": "2026-02-17",
+      "spend": 16.51,
       "clicks": 0,
       "impressions": 0,
       "conversions": 0
     },
     {
-      "date": "2026-04-28",
-      "spend": 14.28,
-      "clicks": 1,
-      "impressions": 24,
-      "conversions": 0
-    },
-    {
-      "date": "2026-04-29",
-      "spend": 13.49,
+      "date": "2026-02-18",
+      "spend": 13.69,
       "clicks": 1,
       "impressions": 25,
       "conversions": 0
     },
     {
-      "date": "2026-04-30",
-      "spend": 13.26,
+      "date": "2026-02-19",
+      "spend": 16.02,
       "clicks": 1,
-      "impressions": 26,
+      "impressions": 22,
       "conversions": 0
     },
     {
-      "date": "2026-05-01",
-      "spend": 15.2,
+      "date": "2026-02-20",
+      "spend": 13.66,
       "clicks": 1,
-      "impressions": 27,
+      "impressions": 25,
       "conversions": 0
     },
     {
-      "date": "2026-05-02",
-      "spend": 16.88,
-      "clicks": 1,
-      "impressions": 29,
+      "date": "2026-02-21",
+      "spend": 14.08,
+      "clicks": 0,
+      "impressions": 0,
       "conversions": 0
     },
     {
-      "date": "2026-05-03",
-      "spend": 16.97,
+      "date": "2026-02-22",
+      "spend": 12.16,
       "clicks": 1,
-      "impressions": 23,
+      "impressions": 22,
       "conversions": 0
     }
   ],
@@ -90,12 +90,12 @@
     {
       "name": "Roof Repair",
       "campaign": "MR — Search",
-      "clicks": 14,
-      "impressions": 307,
-      "conversions": 1,
-      "spend": 45.81,
-      "ctr": 6.52,
-      "cpc": 22.33
+      "clicks": 13,
+      "impressions": 172,
+      "conversions": 2,
+      "spend": 44.02,
+      "ctr": 3.14,
+      "cpc": 30.52
     }
   ],
   "keywords": [
@@ -103,72 +103,72 @@
       "keyword": "roof repair near me",
       "matchType": "EXACT",
       "adGroup": "Roof Repair",
-      "clicks": 3,
-      "impressions": 71,
-      "conversions": 2,
-      "spend": 43.89,
-      "ctr": 4.23,
-      "cpc": 14.63,
-      "cpl": 21.95
+      "clicks": 7,
+      "impressions": 169,
+      "conversions": 0,
+      "spend": 127.96,
+      "ctr": 4.14,
+      "cpc": 18.28,
+      "cpl": null
     },
     {
       "keyword": "roof leak repair",
       "matchType": "EXACT",
       "adGroup": "Roof Repair",
-      "clicks": 8,
-      "impressions": 261,
-      "conversions": 0,
-      "spend": 113.52,
-      "ctr": 3.07,
-      "cpc": 14.19,
-      "cpl": null
+      "clicks": 2,
+      "impressions": 32,
+      "conversions": 2,
+      "spend": 62.42,
+      "ctr": 6.25,
+      "cpc": 31.21,
+      "cpl": 31.21
     },
     {
       "keyword": "roofing contractor",
       "matchType": "PHRASE",
       "adGroup": "Roof Repair",
-      "clicks": 8,
-      "impressions": 184,
+      "clicks": 7,
+      "impressions": 182,
       "conversions": 0,
-      "spend": 159.12,
-      "ctr": 4.35,
-      "cpc": 19.89,
+      "spend": 199.57,
+      "ctr": 3.85,
+      "cpc": 28.51,
       "cpl": null
     },
     {
       "keyword": "emergency roof repair",
       "matchType": "EXACT",
       "adGroup": "Roof Repair",
-      "clicks": 5,
-      "impressions": 131,
-      "conversions": 0,
-      "spend": 143.95,
-      "ctr": 3.82,
-      "cpc": 28.79,
-      "cpl": null
+      "clicks": 4,
+      "impressions": 60,
+      "conversions": 2,
+      "spend": 72.04,
+      "ctr": 6.67,
+      "cpc": 18.01,
+      "cpl": 36.02
     },
     {
       "keyword": "roof repair service",
       "matchType": "PHRASE",
       "adGroup": "Roof Repair",
-      "clicks": 1,
-      "impressions": 16,
-      "conversions": 2,
-      "spend": 25.51,
-      "ctr": 6.25,
-      "cpc": 25.51,
-      "cpl": 12.76
+      "clicks": 4,
+      "impressions": 54,
+      "conversions": 0,
+      "spend": 62.32,
+      "ctr": 7.41,
+      "cpc": 15.58,
+      "cpl": null
     },
     {
       "keyword": "fix roof leak",
       "matchType": "PHRASE",
       "adGroup": "Roof Repair",
-      "clicks": 4,
-      "impressions": 71,
+      "clicks": 3,
+      "impressions": 60,
       "conversions": 0,
-      "spend": 75.52,
-      "ctr": 5.63,
-      "cpc": 18.88,
+      "spend": 59.13,
+      "ctr": 5,
+      "cpc": 19.71,
       "cpl": null
     }
   ],
@@ -176,14 +176,14 @@
     "waste": [
       {
         "term": "roofing jobs hiring",
-        "clicks": 5,
-        "spend": 22.53,
+        "clicks": 7,
+        "spend": 14.74,
         "campaign": "MR — Search",
         "adGroup": "Roof Repair"
       }
     ],
-    "wastePct": 21.2,
-    "wasteSpend": 22.53
+    "wastePct": 14.4,
+    "wasteSpend": 14.74
   },
   "ads": {
     "disapproved": 0
@@ -194,17 +194,17 @@
       {
         "name": "Phone Calls",
         "type": "CALL_FROM_ADS",
-        "conversions": 2
+        "conversions": 0
       }
     ]
   },
   "health": {
-    "score": 90,
+    "score": 85,
     "breakdown": {
       "conversionTracking": 25,
       "budgetPacing": 20,
-      "cpl": 20,
-      "searchTermWaste": 5,
+      "cpl": 10,
+      "searchTermWaste": 10,
       "adApprovals": 10,
       "negativeKeywords": 10
     }
@@ -213,36 +213,36 @@
     "wasteTerms": [
       {
         "term": "roofing jobs hiring",
-        "clicks": 5,
-        "spend": 22.53,
+        "clicks": 7,
+        "spend": 14.74,
         "campaign": "MR — Search",
         "adGroup": "Roof Repair"
       }
     ],
     "bidOpportunities": [
       {
-        "keyword": "roof repair near me",
+        "keyword": "roof leak repair",
         "matchType": "EXACT",
         "adGroup": "Roof Repair",
-        "clicks": 3,
-        "impressions": 71,
+        "clicks": 2,
+        "impressions": 32,
         "conversions": 2,
-        "spend": 43.89,
-        "ctr": 4.23,
-        "cpc": 14.63,
-        "cpl": 21.95
+        "spend": 62.42,
+        "ctr": 6.25,
+        "cpc": 31.21,
+        "cpl": 31.21
       },
       {
-        "keyword": "roof repair service",
-        "matchType": "PHRASE",
+        "keyword": "emergency roof repair",
+        "matchType": "EXACT",
         "adGroup": "Roof Repair",
-        "clicks": 1,
-        "impressions": 16,
+        "clicks": 4,
+        "impressions": 60,
         "conversions": 2,
-        "spend": 25.51,
-        "ctr": 6.25,
-        "cpc": 25.51,
-        "cpl": 12.76
+        "spend": 72.04,
+        "ctr": 6.67,
+        "cpc": 18.01,
+        "cpl": 36.02
       }
     ],
     "underperformingAdGroups": []

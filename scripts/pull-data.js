@@ -20,8 +20,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, "config/clients.json"), "utf-8"));
 
-// v4 — ensure data dir exists at module load
-console.log("[pull-data v4] Script loaded");
+// v5 — Meta Ads support + ensure data dir exists at module load
+console.log("[pull-data v5] Script loaded");
 fs.mkdirSync(path.join(ROOT, "data"), { recursive: true });
 
 // Date helpers
@@ -401,6 +401,222 @@ function roundObj(obj) {
   return out;
 }
 
+// ─────────────────────────────────────────────
+// META ADS — LocalEyes Pro Lead Gen Account
+// ─────────────────────────────────────────────
+async function pullMetaAccount() {
+  const token = process.env.META_ACCESS_TOKEN;
+  if (!token) {
+    console.log("  [Meta] META_ACCESS_TOKEN not set — skipping Meta pull");
+    return null;
+  }
+
+  const accountId = CONFIG.meta?.accountId;
+  if (!accountId) {
+    console.log("  [Meta] No meta.accountId in config — skipping");
+    return null;
+  }
+
+  const API = "https://graph.facebook.com/v21.0";
+  const actId = `act_${accountId}`;
+
+  async function metaGet(endpoint, params = {}) {
+    const url = new URL(`${API}/${endpoint}`);
+    url.searchParams.set("access_token", token);
+    for (const [k, v] of Object.entries(params)) {
+      url.searchParams.set(k, typeof v === "object" ? JSON.stringify(v) : v);
+    }
+    const res = await fetch(url.toString());
+    if (!res.ok) {
+      const body = await res.text();
+      throw new Error(`Meta API ${res.status}: ${body}`);
+    }
+    return res.json();
+  }
+
+  // Date ranges matching Google Ads (last full Mon-Sun week)
+  const thisStart = fmt(lastMonday);
+  const thisEnd = fmt(new Date(thisMonday.getTime() - 86400000));
+  const prevStart = fmt(prevMonday);
+  const prevEnd = fmt(new Date(lastMonday.getTime() - 86400000));
+
+  // 1. Account-level insights — this week
+  const thisWeekData = await metaGet(`${actId}/insights`, {
+    time_range: { since: thisStart, until: thisEnd },
+    fields: "spend,impressions,clicks,ctr,cpc,actions,cost_per_action_type",
+    level: "account",
+  });
+
+  // 2. Account-level insights — prev week
+  const prevWeekData = await metaGet(`${actId}/insights`, {
+    time_range: { since: prevStart, until: prevEnd },
+    fields: "spend,impressions,clicks,ctr,cpc,actions,cost_per_action_type",
+    level: "account",
+  });
+
+  // 3. Campaign breakdown — this week
+  const campaignData = await metaGet(`${actId}/insights`, {
+    time_range: { since: thisStart, until: thisEnd },
+    fields: "campaign_name,campaign_id,spend,impressions,clicks,actions,cost_per_action_type",
+    level: "campaign",
+    limit: 50,
+  });
+
+  // 4. Ad set breakdown — this week
+  const adsetData = await metaGet(`${actId}/insights`, {
+    time_range: { since: thisStart, until: thisEnd },
+    fields: "adset_name,adset_id,campaign_name,spend,impressions,clicks,actions,cost_per_action_type",
+    level: "adset",
+    limit: 50,
+  });
+
+  // 5. Ad breakdown — this week
+  const adData = await metaGet(`${actId}/insights`, {
+    time_range: { since: thisStart, until: thisEnd },
+    fields: "ad_name,ad_id,adset_name,campaign_name,spend,impressions,clicks,actions,cost_per_action_type",
+    level: "ad",
+    limit: 50,
+  });
+
+  // 6. Daily breakdown — this week
+  const dailyData = await metaGet(`${actId}/insights`, {
+    time_range: { since: thisStart, until: thisEnd },
+    fields: "spend,impressions,clicks,actions",
+    time_increment: 1,
+    level: "account",
+  });
+
+  // Helper: extract leads from actions array
+  function getLeads(actions) {
+    if (!actions) return 0;
+    const lead = actions.find(a =>
+      a.action_type === "lead" || a.action_type === "onsite_conversion.lead_grouped"
+    );
+    return lead ? Number(lead.value) || 0 : 0;
+  }
+
+  function getCPL(costPerAction) {
+    if (!costPerAction) return 0;
+    const lead = costPerAction.find(a =>
+      a.action_type === "lead" || a.action_type === "onsite_conversion.lead_grouped"
+    );
+    return lead ? Number(lead.value) || 0 : 0;
+  }
+
+  // Process this week
+  const tw = thisWeekData.data?.[0] || {};
+  const thisWeek = {
+    spend: Number(tw.spend) || 0,
+    impressions: Number(tw.impressions) || 0,
+    clicks: Number(tw.clicks) || 0,
+    ctr: Number(tw.ctr) || 0,
+    cpc: Number(tw.cpc) || 0,
+    leads: getLeads(tw.actions),
+    cpl: getCPL(tw.cost_per_action_type),
+  };
+
+  // Process prev week
+  const pw = prevWeekData.data?.[0] || {};
+  const prevWeekMeta = {
+    spend: Number(pw.spend) || 0,
+    impressions: Number(pw.impressions) || 0,
+    clicks: Number(pw.clicks) || 0,
+    leads: getLeads(pw.actions),
+    cpl: getCPL(pw.cost_per_action_type),
+  };
+
+  // Deltas
+  const delta = {
+    spend: thisWeek.spend - prevWeekMeta.spend,
+    leads: thisWeek.leads - prevWeekMeta.leads,
+    cpl: thisWeek.cpl - prevWeekMeta.cpl,
+    spendPct: prevWeekMeta.spend > 0 ? ((thisWeek.spend - prevWeekMeta.spend) / prevWeekMeta.spend * 100) : 0,
+    leadsPct: prevWeekMeta.leads > 0 ? ((thisWeek.leads - prevWeekMeta.leads) / prevWeekMeta.leads * 100) : 0,
+    cplPct: prevWeekMeta.cpl > 0 ? ((thisWeek.cpl - prevWeekMeta.cpl) / prevWeekMeta.cpl * 100) : 0,
+  };
+
+  // Budget pacing
+  const metaBudget = CONFIG.meta.budget || 0;
+  const weeklyBudget = (metaBudget / 30.4) * 7;
+  const pacing = weeklyBudget > 0 ? (thisWeek.spend / weeklyBudget * 100) : 0;
+
+  // Campaign performance
+  const campaigns = (campaignData.data || []).map(c => ({
+    name: c.campaign_name,
+    id: c.campaign_id,
+    spend: Number(c.spend) || 0,
+    impressions: Number(c.impressions) || 0,
+    clicks: Number(c.clicks) || 0,
+    leads: getLeads(c.actions),
+    cpl: getCPL(c.cost_per_action_type),
+  }));
+
+  // Ad set performance
+  const adsets = (adsetData.data || []).map(a => ({
+    name: a.adset_name,
+    id: a.adset_id,
+    campaign: a.campaign_name,
+    spend: Number(a.spend) || 0,
+    impressions: Number(a.impressions) || 0,
+    clicks: Number(a.clicks) || 0,
+    leads: getLeads(a.actions),
+    cpl: getCPL(a.cost_per_action_type),
+  }));
+
+  // Ad performance
+  const ads = (adData.data || []).map(a => ({
+    name: a.ad_name,
+    id: a.ad_id,
+    adset: a.adset_name,
+    campaign: a.campaign_name,
+    spend: Number(a.spend) || 0,
+    impressions: Number(a.impressions) || 0,
+    clicks: Number(a.clicks) || 0,
+    leads: getLeads(a.actions),
+    cpl: getCPL(a.cost_per_action_type),
+  }));
+
+  // Daily data
+  const daily = (dailyData.data || []).map(d => ({
+    date: d.date_start,
+    spend: Number(d.spend) || 0,
+    impressions: Number(d.impressions) || 0,
+    clicks: Number(d.clicks) || 0,
+    leads: getLeads(d.actions),
+  }));
+
+  const snapshot = {
+    meta: {
+      platform: "meta",
+      accountId,
+      accountName: "LocalEyes Pro — Lead Gen",
+      weekOf: weekLabel,
+      generatedAt: new Date().toISOString(),
+      budget: metaBudget,
+      weeklyBudget: Math.round(weeklyBudget * 100) / 100,
+    },
+    summary: {
+      thisWeek: roundObj(thisWeek),
+      prevWeek: roundObj(prevWeekMeta),
+      delta: roundObj(delta),
+      pacing: Math.round(pacing),
+    },
+    daily,
+    campaigns,
+    adsets,
+    ads,
+  };
+
+  // Write snapshot
+  const metaDir = path.join(ROOT, "data", "meta-localeyespro");
+  fs.mkdirSync(metaDir, { recursive: true });
+  fs.writeFileSync(path.join(metaDir, `week-${weekLabel}.json`), JSON.stringify(snapshot, null, 2));
+  fs.writeFileSync(path.join(metaDir, "latest.json"), JSON.stringify(snapshot, null, 2));
+  console.log(`  [LocalEyes Meta] Snapshot written: week-${weekLabel}.json`);
+
+  return snapshot;
+}
+
 // Main
 async function main() {
   console.log(`\nLocalEyes Reports — Data Pull`);
@@ -427,15 +643,25 @@ async function main() {
     }
   }
 
+  // Pull Meta Ads data
+  let metaSnapshot = null;
+  try {
+    metaSnapshot = await pullMetaAccount();
+  } catch (err) {
+    const errMsg = err?.message || JSON.stringify(err, Object.getOwnPropertyNames(err || {}), 2);
+    console.error(`  [Meta] ERROR: ${errMsg}`);
+  }
+
   // Only fail if ALL clients errored and none produced data
   const hasData = snapshots.some(s => !s.meta.error);
 
-  // Write combined index for internal dashboard
+  // Write combined index for internal dashboard (includes Meta if available)
+  const combined = { googleAds: snapshots, meta: metaSnapshot };
   const indexPath = path.join(ROOT, "data", "latest-all.json");
-  fs.writeFileSync(indexPath, JSON.stringify(snapshots, null, 2));
+  fs.writeFileSync(indexPath, JSON.stringify(combined, null, 2));
   console.log(`\nCombined index written: data/latest-all.json`);
 
-  if (!hasData) {
+  if (!hasData && !metaSnapshot) {
     console.error("\nWARNING: All clients failed. Downstream steps will use error placeholders.");
   }
 

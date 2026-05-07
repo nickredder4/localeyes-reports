@@ -1,0 +1,176 @@
+{
+  "meta": {
+    "platform": "meta",
+    "accountId": "1523727968790479",
+    "accountName": "LocalEyes Pro — Lead Gen",
+    "weekOf": "2026-04-06",
+    "generatedAt": "2026-05-07T19:30:00.774Z",
+    "budget": 500,
+    "weeklyBudget": 115.13
+  },
+  "summary": {
+    "thisWeek": {
+      "spend": 148.81,
+      "impressions": 14077,
+      "clicks": 151,
+      "ctr": 0.010700000000000001,
+      "cpc": 0.99,
+      "leads": 5,
+      "cpl": 29.76
+    },
+    "prevWeek": {
+      "spend": 144.35,
+      "impressions": 15485,
+      "clicks": 148,
+      "leads": 3,
+      "cpl": 48.12
+    },
+    "delta": {
+      "spend": 4.46,
+      "leads": 2,
+      "cpl": -18.36,
+      "spendPct": 3.09,
+      "leadsPct": 66.67,
+      "cplPct": -38.15
+    },
+    "pacing": 129
+  },
+  "daily": [
+    {
+      "date": "2026-04-06",
+      "spend": 15.74,
+      "impressions": 2399,
+      "clicks": 10,
+      "leads": 2
+    },
+    {
+      "date": "2026-04-07",
+      "spend": 15.7,
+      "impressions": 2066,
+      "clicks": 13,
+      "leads": 0
+    },
+    {
+      "date": "2026-04-08",
+      "spend": 20.57,
+      "impressions": 1291,
+      "clicks": 35,
+      "leads": 0
+    },
+    {
+      "date": "2026-04-09",
+      "spend": 25.04,
+      "impressions": 1848,
+      "clicks": 25,
+      "leads": 0
+    },
+    {
+      "date": "2026-04-10",
+      "spend": 26.86,
+      "impressions": 2480,
+      "clicks": 29,
+      "leads": 0
+    },
+    {
+      "date": "2026-04-11",
+      "spend": 26.4,
+      "impressions": 2369,
+      "clicks": 15,
+      "leads": 3
+    },
+    {
+      "date": "2026-04-12",
+      "spend": 18.5,
+      "impressions": 1624,
+      "clicks": 24,
+      "leads": 0
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "Tree Service Owners — Lookalike",
+      "id": "120001",
+      "spend": 73.88,
+      "impressions": 3942,
+      "clicks": 46,
+      "leads": 3,
+      "cpl": 17.18
+    },
+    {
+      "name": "Tree Service Owners — Interest",
+      "id": "120002",
+      "spend": 57.04,
+      "impressions": 3381,
+      "clicks": 28,
+      "leads": 0,
+      "cpl": 22.54
+    }
+  ],
+  "adsets": [
+    {
+      "name": "LAL 1% — US Wide",
+      "id": "130001",
+      "campaign": "Tree Service Owners — Lookalike",
+      "spend": 29.62,
+      "impressions": 2459,
+      "clicks": 28,
+      "leads": 3,
+      "cpl": 26.5
+    },
+    {
+      "name": "LAL 3% — US Wide",
+      "id": "130002",
+      "campaign": "Tree Service Owners — Lookalike",
+      "spend": 20.13,
+      "impressions": 1134,
+      "clicks": 20,
+      "leads": 1,
+      "cpl": 37.28
+    },
+    {
+      "name": "Interest — Arborist + Landscaping",
+      "id": "130003",
+      "campaign": "Tree Service Owners — Interest",
+      "spend": 18.74,
+      "impressions": 1402,
+      "clicks": 12,
+      "leads": 2,
+      "cpl": 47.55
+    }
+  ],
+  "ads": [
+    {
+      "name": "Video — Before/After Tree Job",
+      "id": "140001",
+      "adset": "LAL 1% — US Wide",
+      "campaign": "Tree Service Owners — Lookalike",
+      "spend": 10.57,
+      "impressions": 1269,
+      "clicks": 14,
+      "leads": 2,
+      "cpl": 29.12
+    },
+    {
+      "name": "Image — Growth Stats",
+      "id": "140002",
+      "adset": "LAL 1% — US Wide",
+      "campaign": "Tree Service Owners — Lookalike",
+      "spend": 17.01,
+      "impressions": 619,
+      "clicks": 11,
+      "leads": 1,
+      "cpl": 24.82
+    },
+    {
+      "name": "Carousel — Case Studies",
+      "id": "140003",
+      "adset": "Interest — Arborist + Landscaping",
+      "campaign": "Tree Service Owners — Interest",
+      "spend": 14.22,
+      "impressions": 869,
+      "clicks": 7,
+      "leads": 0,
+      "cpl": 27.78
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "clientId": "mega-roofing",
+    "clientName": "Mega Roofing",
+    "vertical": "roofing-repair",
+    "weekOf": "2026-03-16",
+    "generatedAt": "2026-05-07T19:30:00.771Z",
+    "budget": 450,
+    "weeklyBudget": 103.62
+  },
+  "summary": {
+    "thisWeek": {
+      "spend": 103.06,
+      "clicks": 7,
+      "impressions": 164,
+      "conversions": 2,
+      "ctr": 4.27,
+      "cpc": 14.72,
+      "cpl": 51.53
+    },
+    "prevWeek": {
+      "spend": 108.21,
+      "clicks": 8,
+      "impressions": 144,
+      "conversions": 3,
+      "cpl": 36.07
+    },
+    "delta": {
+      "spend": -5.15,
+      "leads": -1,
+      "cpl": 15.46,
+      "spendPct": -4.76,
+      "leadsPct": -33.33,
+      "cplPct": 42.86
+    },
+    "pacing": 99
+  },
+  "daily": [
+    {
+      "date": "2026-03-16",
+      "spend": 16.62,
+      "clicks": 1,
+      "impressions": 28,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-17",
+      "spend": 13.37,
+      "clicks": 1,
+      "impressions": 21,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-18",
+      "spend": 15.88,
+      "clicks": 1,
+      "impressions": 26,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-19",
+      "spend": 12.93,
+      "clicks": 1,
+      "impressions": 21,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-20",
+      "spend": 12.27,
+      "clicks": 1,
+      "impressions": 24,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-21",
+      "spend": 15.53,
+      "clicks": 1,
+      "impressions": 24,
+      "conversions": 0
+    },
+    {
+      "date": "2026-03-22",
+      "spend": 16.46,
+      "clicks": 1,
+      "impressions": 20,
+      "conversions": 0
+    }
+  ],
+  "adGroups": [
+    {
+      "name": "Roof Repair",
+      "campaign": "MR — Search",
+      "clicks": 11,
+      "impressions": 326,
+      "conversions": 3,
+      "spend": 58.29,
+      "ctr": 5.21,
+      "cpc": 23.74
+    }
+  ],
+  "keywords": [
+    {
+      "keyword": "roof repair near me",
+      "matchType": "EXACT",
+      "adGroup": "Roof Repair",
+      "clicks": 7,
+      "impressions": 88,
+      "conversions": 0,
+      "spend": 140.98,
+      "ctr": 7.95,
+      "cpc": 20.14,
+      "cpl": null
+    },
+    {
+      "keyword": "roof leak repair",
+      "matchType": "EXACT",
+      "adGroup": "Roof Repair",
+      "clicks": 8,
+      "impressions": 131,
+      "conversions": 0,
+      "spend": 244.24,
+      "ctr": 6.11,
+      "cpc": 30.53,
+      "cpl": null
+    },
+    {
+      "keyword": "roofing contractor",
+      "matchType": "PHRASE",
+      "adGroup": "Roof Repair",
+      "clicks": 8,
+      "impressions": 245,
+      "conversions": 1,
+      "spend": 120,
+      "ctr": 3.27,
+      "cpc": 15,
+      "cpl": 120
+    },
+    {
+      "keyword": "emergency roof repair",
+      "matchType": "EXACT",
+      "adGroup": "Roof Repair",
+      "clicks": 8,
+      "impressions": 115,
+      "conversions": 0,
+      "spend": 137.2,
+      "ctr": 6.96,
+      "cpc": 17.15,
+      "cpl": null
+    },
+    {
+      "keyword": "roof repair service",
+      "matchType": "PHRASE",
+      "adGroup": "Roof Repair",
+      "clicks": 7,
+      "impressions": 205,
+      "conversions": 0,
+      "spend": 201.74,
+      "ctr": 3.41,
+      "cpc": 28.82,
+      "cpl": null
+    },
+    {
+      "keyword": "fix roof leak",
+      "matchType": "PHRASE",
+      "adGroup": "Roof Repair",
+      "clicks": 6,
+      "impressions": 84,
+      "conversions": 0,
+      "spend": 148.92,
+      "ctr": 7.14,
+      "cpc": 24.82,
+      "cpl": null
+    }
+  ],
+  "searchTerms": {
+    "waste": [
+      {
+        "term": "roofing jobs hiring",
+        "clicks": 7,
+        "spend": 14.29,
+        "campaign": "MR — Search",
+        "adGroup": "Roof Repair"
+      }
+    ],
+    "wastePct": 13.9,
+    "wasteSpend": 14.29
+  },
+  "ads": {
+    "disapproved": 0
+  },
+  "conversionTracking": {
+    "active": true,
+    "actions": [
+      {
+        "name": "Phone Calls",
+        "type": "CALL_FROM_ADS",
+        "conversions": 2
+      }
+    ]
+  },
+  "health": {
+    "score": 95,
+    "breakdown": {
+      "conversionTracking": 25,
+      "budgetPacing": 20,
+      "cpl": 20,
+      "searchTermWaste": 10,
+      "adApprovals": 10,
+      "negativeKeywords": 10
+    }
+  },
+  "alerts": {
+    "wasteTerms": [
+      {
+        "term": "roofing jobs hiring",
+        "clicks": 7,
+        "spend": 14.29,
+        "campaign": "MR — Search",
+        "adGroup": "Roof Repair"
+      }
+    ],
+    "bidOpportunities": [],
+    "underperformingAdGroups": []
+  }
+}

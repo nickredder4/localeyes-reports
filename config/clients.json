@@ -29,6 +29,15 @@
       }
     }
   ],
+  "meta": {
+    "accountId": "1523727968790479",
+    "accountName": "LocalEyes Pro — Lead Gen",
+    "budget": 500,
+    "benchmarks": {
+      "cplLow": 15,
+      "cplHigh": 50
+    }
+  },
   "settings": {
     "weeksToRetain": 12,
     "emailTo": "nick.redder4@gmail.com",
