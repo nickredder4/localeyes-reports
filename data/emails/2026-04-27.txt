@@ -1,0 +1,52 @@
+LOCALEYES PRO — WEEKLY OPTIMIZATION REPORT
+Week of 2026-04-27
+══════════════════════════════════════════════════
+
+OVERVIEW
+──────────────────────────────────────────────────
+Supreme Tree Experts: 3 leads | $139.49 spent | $46.50 CPL | 🔴 60
+Mega Roofing: 0 leads | $0.00 spent | No conv | 🔴 45
+
+═══ SUPREME TREE EXPERTS ═══
+Spend: $139.49 / $103.62 weekly budget (135% paced)
+Leads: 3  |  CPL: $46.50  |  — 0% vs last week
+Clicks: 28  |  CTR: 2.4%  |  CPC: $4.98
+Health Score: 60/100
+
+⚠️  ACTION ITEMS:
+• Keyword "tree planning" CPL at $21.00 — well below benchmark, consider bid increase
+• Keyword "lawn service in" CPL at $19.70 — well below benchmark, consider bid increase
+• Keyword "tree specialists" CPL at $12.24 — well below benchmark, consider bid increase
+• Ad group "Ad group 1" CTR at 2.4% (below 3% floor) — review ad copy
+• ⚠️ CRITICAL: No active conversions detected this week — verify tracking setup
+• Budget overspending at 135% — check for bid inflation or broad match leakage
+
+✅ HEALTHY:
+• No disapproved ads
+• Search term waste low (0%)
+
+🏆 TOP KEYWORDS:
+• "tree specialists" [4] — 1 conv, $12.24 CPL
+• "lawn service in" [4] — 1 conv, $19.70 CPL
+• "tree planning" [4] — 1 conv, $21.00 CPL
+
+HEALTH BREAKDOWN: Tracking 0/25 | Pacing 5/20 | CPL 20/20 | Waste 15/15 | Ads 10/10 | Negatives 10/10
+
+═══ MEGA ROOFING ═══
+Spend: $0.00 / $103.62 weekly budget (0% paced)
+Leads: 0  |  CPL: N/A  |  — 0% vs last week
+Clicks: 0  |  CTR: 0.0%  |  CPC: $0.00
+Health Score: 45/100
+
+⚠️  ACTION ITEMS:
+• ⚠️ CRITICAL: No active conversions detected this week — verify tracking setup
+• Budget underspending at 0% — check bid levels and keyword volume
+
+✅ HEALTHY:
+• No disapproved ads
+• Search term waste low (0%)
+
+HEALTH BREAKDOWN: Tracking 0/25 | Pacing 0/20 | CPL 10/20 | Waste 15/15 | Ads 10/10 | Negatives 10/10
+
+══════════════════════════════════════════════════
+Generated automatically by LocalEyes Reports
