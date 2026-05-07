@@ -15,9 +15,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - run: npm ci
+
+      - name: Verify code version
+        run: head -30 scripts/pull-data.js
 
       # Pull fresh data from Google Ads
       - name: Pull data
