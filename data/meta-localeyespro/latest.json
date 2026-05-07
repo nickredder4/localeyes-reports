@@ -3,174 +3,123 @@
     "platform": "meta",
     "accountId": "1523727968790479",
     "accountName": "LocalEyes Pro — Lead Gen",
-    "weekOf": "2026-05-04",
-    "generatedAt": "2026-05-07T19:30:00.775Z",
+    "weekOf": "2026-04-27",
+    "generatedAt": "2026-05-07T20:04:01.834Z",
     "budget": 500,
     "weeklyBudget": 115.13
   },
   "summary": {
     "thisWeek": {
-      "spend": 142.01,
-      "impressions": 12754,
-      "clicks": 139,
-      "ctr": 0.0109,
-      "cpc": 1.02,
-      "leads": 2,
-      "cpl": 71.01
+      "spend": 65.47,
+      "impressions": 2301,
+      "clicks": 26,
+      "ctr": 1.13,
+      "cpc": 2.52,
+      "leads": 1,
+      "cpl": 65.47
     },
     "prevWeek": {
-      "spend": 153.37,
-      "impressions": 12371,
-      "clicks": 125,
-      "leads": 1,
-      "cpl": 153.37
+      "spend": 69.01,
+      "impressions": 1566,
+      "clicks": 22,
+      "leads": 2,
+      "cpl": 34.51
     },
     "delta": {
-      "spend": -11.36,
-      "leads": 1,
-      "cpl": -82.36,
-      "spendPct": -7.41,
-      "leadsPct": 100,
-      "cplPct": -53.7
+      "spend": -3.54,
+      "leads": -1,
+      "cpl": 30.96,
+      "spendPct": -5.13,
+      "leadsPct": -50,
+      "cplPct": 89.74
     },
-    "pacing": 123
+    "pacing": 57
   },
   "daily": [
     {
-      "date": "2026-05-04",
-      "spend": 15.55,
-      "impressions": 1061,
+      "date": "2026-04-27",
+      "spend": 10.01,
+      "impressions": 312,
+      "clicks": 6,
+      "leads": 0
+    },
+    {
+      "date": "2026-04-28",
+      "spend": 10.79,
+      "impressions": 325,
+      "clicks": 3,
+      "leads": 0
+    },
+    {
+      "date": "2026-04-29",
+      "spend": 12.23,
+      "impressions": 381,
       "clicks": 8,
+      "leads": 1
+    },
+    {
+      "date": "2026-04-30",
+      "spend": 9.31,
+      "impressions": 430,
+      "clicks": 5,
       "leads": 0
     },
     {
-      "date": "2026-05-05",
-      "spend": 22.08,
-      "impressions": 2331,
-      "clicks": 17,
+      "date": "2026-05-01",
+      "spend": 7.69,
+      "impressions": 383,
+      "clicks": 1,
       "leads": 0
     },
     {
-      "date": "2026-05-06",
-      "spend": 22.22,
-      "impressions": 2478,
-      "clicks": 30,
+      "date": "2026-05-02",
+      "spend": 5.27,
+      "impressions": 206,
+      "clicks": 2,
       "leads": 0
     },
     {
-      "date": "2026-05-07",
-      "spend": 21.13,
-      "impressions": 2012,
-      "clicks": 9,
-      "leads": 0
-    },
-    {
-      "date": "2026-05-08",
-      "spend": 17.49,
-      "impressions": 1943,
-      "clicks": 24,
-      "leads": 0
-    },
-    {
-      "date": "2026-05-09",
-      "spend": 20.28,
-      "impressions": 965,
-      "clicks": 30,
-      "leads": 0
-    },
-    {
-      "date": "2026-05-10",
-      "spend": 23.26,
-      "impressions": 1964,
-      "clicks": 21,
+      "date": "2026-05-03",
+      "spend": 10.17,
+      "impressions": 264,
+      "clicks": 1,
       "leads": 0
     }
   ],
   "campaigns": [
     {
-      "name": "Tree Service Owners — Lookalike",
-      "id": "120001",
-      "spend": 64.56,
-      "impressions": 3221,
-      "clicks": 25,
-      "leads": 4,
-      "cpl": 33.31
-    },
-    {
-      "name": "Tree Service Owners — Interest",
-      "id": "120002",
-      "spend": 33.66,
-      "impressions": 3708,
-      "clicks": 38,
+      "name": "Tree Service Anya New",
+      "id": "120242239161050742",
+      "spend": 65.47,
+      "impressions": 2301,
+      "clicks": 26,
       "leads": 1,
-      "cpl": 21.72
+      "cpl": 65.47
     }
   ],
   "adsets": [
     {
-      "name": "LAL 1% — US Wide",
-      "id": "130001",
-      "campaign": "Tree Service Owners — Lookalike",
-      "spend": 30.29,
-      "impressions": 1864,
-      "clicks": 25,
-      "leads": 3,
-      "cpl": 23.15
-    },
-    {
-      "name": "LAL 3% — US Wide",
-      "id": "130002",
-      "campaign": "Tree Service Owners — Lookalike",
-      "spend": 29.59,
-      "impressions": 1990,
-      "clicks": 16,
+      "name": "Just FB Ad Set",
+      "id": "120242239161060742",
+      "campaign": "Tree Service Anya New",
+      "spend": 65.47,
+      "impressions": 2301,
+      "clicks": 26,
       "leads": 1,
-      "cpl": 47.55
-    },
-    {
-      "name": "Interest — Arborist + Landscaping",
-      "id": "130003",
-      "campaign": "Tree Service Owners — Interest",
-      "spend": 15.53,
-      "impressions": 1958,
-      "clicks": 17,
-      "leads": 2,
-      "cpl": 29.74
+      "cpl": 65.47
     }
   ],
   "ads": [
     {
-      "name": "Video — Before/After Tree Job",
-      "id": "140001",
-      "adset": "LAL 1% — US Wide",
-      "campaign": "Tree Service Owners — Lookalike",
-      "spend": 24.79,
-      "impressions": 1124,
-      "clicks": 8,
-      "leads": 2,
-      "cpl": 38.97
-    },
-    {
-      "name": "Image — Growth Stats",
-      "id": "140002",
-      "adset": "LAL 1% — US Wide",
-      "campaign": "Tree Service Owners — Lookalike",
-      "spend": 12.59,
-      "impressions": 413,
-      "clicks": 7,
+      "name": "New Leads Ad",
+      "id": "120242239161070742",
+      "adset": "Just FB Ad Set",
+      "campaign": "Tree Service Anya New",
+      "spend": 65.47,
+      "impressions": 2301,
+      "clicks": 26,
       "leads": 1,
-      "cpl": 49.5
-    },
-    {
-      "name": "Carousel — Case Studies",
-      "id": "140003",
-      "adset": "Interest — Arborist + Landscaping",
-      "campaign": "Tree Service Owners — Interest",
-      "spend": 8.61,
-      "impressions": 613,
-      "clicks": 9,
-      "leads": 0,
-      "cpl": 47.21
+      "cpl": 65.47
     }
   ]
 }
