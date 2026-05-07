@@ -20,6 +20,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, "config/clients.json"), "utf-8"));
 
+// v4 — ensure data dir exists at module load
+console.log("[pull-data v4] Script loaded");
+fs.mkdirSync(path.join(ROOT, "data"), { recursive: true });
+
 // Date helpers
 function fmt(d) { return d.toISOString().slice(0, 10); }
 function mondayOf(d) {
