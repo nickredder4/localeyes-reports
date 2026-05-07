@@ -4,7 +4,7 @@
     "clientName": "Mega Roofing",
     "vertical": "roofing-repair",
     "weekOf": "2026-04-27",
-    "generatedAt": "2026-05-07T20:05:55.446Z",
+    "generatedAt": "2026-05-07T20:07:43.159Z",
     "budget": 450,
     "weeklyBudget": 103.62
   },
@@ -39,26 +39,6 @@
   "adGroups": [
     {
       "name": "Ad group 1",
-      "campaign": "Megaroofing Doble ad 1",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
-      "name": "Ad group 1",
-      "campaign": "mega doble phone call conversion ad",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
-      "name": "Ad group 1",
       "campaign": "Sales-Search-5 Doble",
       "clicks": 0,
       "impressions": 0,
@@ -69,17 +49,7 @@
     },
     {
       "name": "Ad group 1",
-      "campaign": "Sales-Search-7 hail storm area1",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
-      "name": "Ad group 1",
-      "campaign": "Lead form ad doble",
+      "campaign": "Megaroofing Doble ad 1",
       "clicks": 0,
       "impressions": 0,
       "conversions": 0,
@@ -99,7 +69,37 @@
     },
     {
       "name": "Ad group 1",
+      "campaign": "mega doble phone call conversion ad",
+      "clicks": 0,
+      "impressions": 0,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0
+    },
+    {
+      "name": "Ad group 1",
+      "campaign": "Sales-Search-7 hail storm area1",
+      "clicks": 0,
+      "impressions": 0,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0
+    },
+    {
+      "name": "Ad group 1",
       "campaign": "Search-13 aug 7",
+      "clicks": 0,
+      "impressions": 0,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0
+    },
+    {
+      "name": "Ad group 1",
+      "campaign": "Lead form ad doble",
       "clicks": 0,
       "impressions": 0,
       "conversions": 0,
@@ -158,26 +158,6 @@
       "cpc": 0
     },
     {
-      "name": "Ad group 1",
-      "campaign": "PHONE CALL NEW AD",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
-      "name": "Quality Roofing Services in St. Cloud, Florida",
-      "campaign": "Feb 19 Doble Phone Call Ad",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
       "name": "Roof Repair",
       "campaign": "Website Leads Mar026",
       "clicks": 0,
@@ -190,6 +170,16 @@
     {
       "name": "Cost / Estimate",
       "campaign": "Website Leads Mar026",
+      "clicks": 0,
+      "impressions": 0,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0
+    },
+    {
+      "name": "Quality Roofing Services in St. Cloud, Florida",
+      "campaign": "Feb 19 Doble Phone Call Ad",
       "clicks": 0,
       "impressions": 0,
       "conversions": 0,
@@ -220,6 +210,16 @@
     {
       "name": "Insurance / Storm Damage",
       "campaign": "Website Leads Mar026",
+      "clicks": 0,
+      "impressions": 0,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0
+    },
+    {
+      "name": "Ad group 1",
+      "campaign": "PHONE CALL NEW AD",
       "clicks": 0,
       "impressions": 0,
       "conversions": 0,
