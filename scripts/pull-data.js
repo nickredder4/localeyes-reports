@@ -147,14 +147,14 @@ async function pullClient(clientConfig) {
   `);
 
   // 7. Conversion actions (verify tracking is active)
+  // Note: metrics.conversions is incompatible with conversion_action resource
+  // Use all_conversions from campaign instead, and just check action status here
   const conversionRows = await customer.query(`
     SELECT
       conversion_action.name,
       conversion_action.status,
-      conversion_action.type,
-      metrics.conversions
+      conversion_action.type
     FROM conversion_action
-    WHERE segments.date BETWEEN ${THIS_WEEK}
   `);
 
   // 8. Daily breakdown for charts
@@ -261,8 +261,8 @@ async function pullClient(clientConfig) {
   const activeConversions = conversionRows.filter(r =>
     r.conversion_action.status === "ENABLED"
   );
-  const conversionTrackingActive = activeConversions.length > 0 &&
-    activeConversions.some(r => (Number(r.metrics.conversions) || 0) > 0);
+  // Use campaign-level conversions to determine if tracking is firing
+  const conversionTrackingActive = activeConversions.length > 0 && thisWeek.conversions > 0;
 
   // Daily data for charts
   const daily = {};
@@ -329,7 +329,6 @@ async function pullClient(clientConfig) {
       actions: activeConversions.map(r => ({
         name: r.conversion_action.name,
         type: r.conversion_action.type,
-        conversions: Number(r.metrics.conversions) || 0,
       })),
     },
     health,
