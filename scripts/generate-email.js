@@ -190,7 +190,9 @@ async function main() {
     process.exit(1);
   }
 
-  const snapshots = JSON.parse(fs.readFileSync(allPath, "utf-8"));
+  const raw = JSON.parse(fs.readFileSync(allPath, "utf-8"));
+  // Support both old format (array) and new format ({ googleAds: [...], meta: {...} })
+  const snapshots = Array.isArray(raw) ? raw : (raw.googleAds || []);
   const weekLabel = snapshots[0]?.meta?.weekOf || "Unknown";
   const subject = `LocalEyes Weekly Report — ${weekLabel}`;
   const body = buildEmailBody(snapshots);
