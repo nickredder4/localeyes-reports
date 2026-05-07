@@ -47,12 +47,12 @@ jobs:
       - name: Build dashboards
         run: npm run build
 
-      # Commit data snapshots back to repo (preserves history)
+      # Commit data + built dashboards back to repo
       - name: Commit data
         run: |
           git config user.name "LocalEyes Reports Bot"
           git config user.email "reports@localeyespro.com"
-          git add data/
+          git add data/ public/
           git diff --staged --quiet || git commit -m "data: weekly snapshot $(date +%Y-%m-%d)"
           git pull --rebase origin main || true
           git push
