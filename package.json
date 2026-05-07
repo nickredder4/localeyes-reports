@@ -1,0 +1,19 @@
+{
+  "name": "localeyes-reports",
+  "version": "1.0.0",
+  "description": "LocalEyes Pro automated reporting dashboards",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "pull": "node scripts/pull-data.js",
+    "email": "node scripts/generate-email.js",
+    "build": "node scripts/build-dashboards.js",
+    "report": "node scripts/pull-data.js && node scripts/generate-email.js && node scripts/build-dashboards.js",
+    "dev": "npx serve public"
+  },
+  "dependencies": {
+    "google-ads-api": "^23.0.0",
+    "googleapis": "^144.0.0",
+    "chart.js": "^4.4.0"
+  }
+}

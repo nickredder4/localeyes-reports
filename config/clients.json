@@ -1,0 +1,38 @@
+{
+  "clients": [
+    {
+      "id": "supreme-tree-experts",
+      "name": "Supreme Tree Experts",
+      "googleAdsId": "846-394-0560",
+      "googleAdsCustomerId": "8463940560",
+      "budget": 450,
+      "vertical": "tree-service",
+      "slug": "s8ka2x",
+      "benchmarks": {
+        "cplLow": 30,
+        "cplHigh": 70,
+        "ctrFloor": 3.0
+      }
+    },
+    {
+      "id": "mega-roofing",
+      "name": "Mega Roofing",
+      "googleAdsId": "515-792-5619",
+      "googleAdsCustomerId": "5157925619",
+      "budget": 450,
+      "vertical": "roofing-repair",
+      "slug": "m3rp7q",
+      "benchmarks": {
+        "cplLow": 40,
+        "cplHigh": 70,
+        "ctrFloor": 3.0
+      }
+    }
+  ],
+  "settings": {
+    "weeksToRetain": 12,
+    "emailTo": "nick.redder4@gmail.com",
+    "reportDay": "Monday",
+    "timezone": "America/New_York"
+  }
+}
