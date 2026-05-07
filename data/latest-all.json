@@ -5,7 +5,7 @@
       "clientName": "Supreme Tree Experts",
       "vertical": "tree-service",
       "weekOf": "2026-04-27",
-      "generatedAt": "2026-05-07T18:30:08.645Z",
+      "generatedAt": "2026-05-07T18:40:39.294Z",
       "budget": 450,
       "weeklyBudget": 103.62
     },
@@ -89,6 +89,16 @@
     ],
     "adGroups": [
       {
+        "name": "Ad group 1",
+        "campaign": "Local tree Services ads",
+        "clicks": 28,
+        "impressions": 1156,
+        "conversions": 3,
+        "spend": 139.488372,
+        "ctr": 2.422145328719723,
+        "cpc": 4.981727571428572
+      },
+      {
         "name": "Tree Planting & Transplanting",
         "campaign": "Lead Search Ads- April 26",
         "clicks": 0,
@@ -109,14 +119,24 @@
         "cpc": 0
       },
       {
-        "name": "Ad group 1",
-        "campaign": "Local tree Services ads",
-        "clicks": 28,
-        "impressions": 1156,
-        "conversions": 3,
-        "spend": 139.488372,
-        "ctr": 2.422145328719723,
-        "cpc": 4.981727571428572
+        "name": "Tree Trimming & Pruning",
+        "campaign": "Lead Search Ads- April 26",
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0,
+        "spend": 0,
+        "ctr": 0,
+        "cpc": 0
+      },
+      {
+        "name": "Stump Grinding and Removal",
+        "campaign": "Lead Search Ads- April 26",
+        "clicks": 0,
+        "impressions": 0,
+        "conversions": 0,
+        "spend": 0,
+        "ctr": 0,
+        "cpc": 0
       },
       {
         "name": "Tree Removal",
@@ -131,26 +151,6 @@
       {
         "name": "Tree Trimming & Service",
         "campaign": "STE — Search — May 2026",
-        "clicks": 0,
-        "impressions": 0,
-        "conversions": 0,
-        "spend": 0,
-        "ctr": 0,
-        "cpc": 0
-      },
-      {
-        "name": "Tree Trimming & Pruning",
-        "campaign": "Lead Search Ads- April 26",
-        "clicks": 0,
-        "impressions": 0,
-        "conversions": 0,
-        "spend": 0,
-        "ctr": 0,
-        "cpc": 0
-      },
-      {
-        "name": "Stump Grinding and Removal",
-        "campaign": "Lead Search Ads- April 26",
         "clicks": 0,
         "impressions": 0,
         "conversions": 0,
@@ -1204,7 +1204,7 @@
       "clientName": "Mega Roofing",
       "vertical": "roofing-repair",
       "weekOf": "2026-04-27",
-      "generatedAt": "2026-05-07T18:30:14.458Z",
+      "generatedAt": "2026-05-07T18:40:42.692Z",
       "budget": 450,
       "weeklyBudget": 103.62
     },
