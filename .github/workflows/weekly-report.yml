@@ -54,7 +54,8 @@ jobs:
           git config user.email "reports@localeyespro.com"
           git add data/ public/
           git diff --staged --quiet || git commit -m "data: weekly snapshot $(date +%Y-%m-%d)"
-          git pull --rebase origin main || true
+          git fetch origin main
+          git merge origin/main --no-edit -X ours || true
           git push
 
       # Deploy to Cloudflare Pages
