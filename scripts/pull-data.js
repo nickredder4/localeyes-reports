@@ -404,21 +404,39 @@ async function main() {
   console.log(`Week of: ${weekLabel}`);
   console.log(`Pulling ${CONFIG.clients.length} client(s)...\n`);
 
+  // Ensure data directory exists
+  fs.mkdirSync(path.join(ROOT, "data"), { recursive: true });
+
   const snapshots = [];
   for (const c of CONFIG.clients) {
     try {
       const snap = await pullClient(c);
       snapshots.push(snap);
     } catch (err) {
-      console.error(`  [${c.name}] ERROR: ${err.message}`);
-      snapshots.push({ meta: { clientId: c.id, clientName: c.name, error: err.message } });
+      // Google Ads API errors can be nested — extract the real message
+      const errMsg = err?.errors?.[0]?.message || err?.message || JSON.stringify(err);
+      console.error(`  [${c.name}] ERROR: ${errMsg}`);
+      if (err?.errors) {
+        for (const e of err.errors) {
+          console.error(`    Detail: ${JSON.stringify(e)}`);
+        }
+      }
+      snapshots.push({ meta: { clientId: c.id, clientName: c.name, weekOf: weekLabel, error: errMsg } });
     }
   }
+
+  // Only fail if ALL clients errored and none produced data
+  const hasData = snapshots.some(s => !s.meta.error);
 
   // Write combined index for internal dashboard
   const indexPath = path.join(ROOT, "data", "latest-all.json");
   fs.writeFileSync(indexPath, JSON.stringify(snapshots, null, 2));
   console.log(`\nCombined index written: data/latest-all.json`);
+
+  if (!hasData) {
+    console.error("\nWARNING: All clients failed. Downstream steps will use error placeholders.");
+  }
+
   console.log("Done.\n");
 }
 
