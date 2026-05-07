@@ -57,12 +57,13 @@ jobs:
           git push
 
       # Deploy to Cloudflare Pages
-      - name: Deploy
+      - name: Create Pages project
+        continue-on-error: true
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages project create localeyes-reports --production-branch main || true
+          command: pages project create localeyes-reports --production-branch main
       - name: Deploy pages
         uses: cloudflare/wrangler-action@v3
         with:
