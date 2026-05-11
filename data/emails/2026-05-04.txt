@@ -1,0 +1,47 @@
+LOCALEYES PRO — WEEKLY OPTIMIZATION REPORT
+Week of 2026-05-04
+══════════════════════════════════════════════════
+
+OVERVIEW
+──────────────────────────────────────────────────
+Supreme Tree Experts: 0 leads | $44.10 spent | No conv | 🔴 45
+Mega Roofing: 0 leads | $62.44 spent | No conv | 🔴 35
+
+═══ SUPREME TREE EXPERTS ═══
+Spend: $44.10 / $103.62 weekly budget (43% paced)
+Leads: 0  |  CPL: N/A  |  ▼ -100% vs last week
+Clicks: 14  |  CTR: 2.2%  |  CPC: $3.15
+Health Score: 45/100
+
+⚠️  ACTION ITEMS:
+• Ad group "Ad group 1" CTR at 2.1% (below 3% floor) — review ad copy
+• Ad group "Tree Removal" CTR at 1.9% (below 3% floor) — review ad copy
+• ⚠️ CRITICAL: No active conversions detected this week — verify tracking setup
+• Budget underspending at 43% — check bid levels and keyword volume
+
+✅ HEALTHY:
+• No disapproved ads
+• Search term waste low (0%)
+
+HEALTH BREAKDOWN: Tracking 0/25 | Pacing 0/20 | CPL 10/20 | Waste 15/15 | Ads 10/10 | Negatives 10/10
+
+═══ MEGA ROOFING ═══
+Spend: $62.44 / $103.62 weekly budget (60% paced)
+Leads: 0  |  CPL: N/A  |  — 0% vs last week
+Clicks: 15  |  CTR: 40.5%  |  CPC: $4.16
+Health Score: 35/100
+
+⚠️  ACTION ITEMS:
+• 2 search terms to review as potential negatives:
+•    "roof leak repairs" — 4 clicks, $16.89, 0 conv
+•    "roofing contractors in my area" — 3 clicks, $8.87, 0 conv
+• ⚠️ CRITICAL: No active conversions detected this week — verify tracking setup
+• Budget underspending at 60% — check bid levels and keyword volume
+
+✅ HEALTHY:
+• No disapproved ads
+
+HEALTH BREAKDOWN: Tracking 0/25 | Pacing 5/20 | CPL 10/20 | Waste 0/15 | Ads 10/10 | Negatives 10/10
+
+══════════════════════════════════════════════════
+Generated automatically by LocalEyes Reports

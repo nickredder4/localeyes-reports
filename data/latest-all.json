@@ -5,100 +5,90 @@
         "clientId": "supreme-tree-experts",
         "clientName": "Supreme Tree Experts",
         "vertical": "tree-service",
-        "weekOf": "2026-04-27",
-        "generatedAt": "2026-05-07T20:09:29.160Z",
+        "weekOf": "2026-05-04",
+        "generatedAt": "2026-05-11T13:49:20.530Z",
         "budget": 450,
         "weeklyBudget": 103.62
       },
       "summary": {
         "thisWeek": {
+          "spend": 44.1,
+          "clicks": 14,
+          "impressions": 649,
+          "conversions": 0,
+          "ctr": 2.16,
+          "cpc": 3.15,
+          "cpl": 0
+        },
+        "prevWeek": {
           "spend": 139.49,
           "clicks": 28,
           "impressions": 1156,
           "conversions": 3,
-          "ctr": 2.42,
-          "cpc": 4.98,
           "cpl": 46.5
         },
-        "prevWeek": {
-          "spend": 121.98,
-          "clicks": 40,
-          "impressions": 2965,
-          "conversions": 0,
-          "cpl": 0
-        },
         "delta": {
-          "spend": 17.51,
-          "leads": 3,
-          "cpl": 46.5,
-          "spendPct": 14.35,
-          "leadsPct": 0,
-          "cplPct": 0
+          "spend": -95.39,
+          "leads": -3,
+          "cpl": -46.5,
+          "spendPct": -68.39,
+          "leadsPct": -100,
+          "cplPct": -100
         },
-        "pacing": 135
+        "pacing": 43
       },
       "daily": [
         {
-          "date": "2026-04-27",
-          "spend": 33.1,
-          "clicks": 7,
-          "impressions": 346,
-          "conversions": 0
-        },
-        {
-          "date": "2026-04-28",
-          "spend": 14.45,
-          "clicks": 7,
-          "impressions": 352,
-          "conversions": 0
-        },
-        {
-          "date": "2026-04-29",
-          "spend": 25.69,
-          "clicks": 2,
-          "impressions": 98,
-          "conversions": 1
-        },
-        {
-          "date": "2026-04-30",
-          "spend": 20.36,
+          "date": "2026-05-04",
+          "spend": 6.45,
           "clicks": 4,
-          "impressions": 114,
+          "impressions": 122,
           "conversions": 0
         },
         {
-          "date": "2026-05-01",
-          "spend": 21.34,
-          "clicks": 3,
-          "impressions": 71,
-          "conversions": 1
-        },
-        {
-          "date": "2026-05-02",
-          "spend": 13.95,
-          "clicks": 4,
-          "impressions": 157,
-          "conversions": 0
-        },
-        {
-          "date": "2026-05-03",
-          "spend": 10.59,
+          "date": "2026-05-05",
+          "spend": 6.29,
           "clicks": 1,
-          "impressions": 18,
-          "conversions": 1
+          "impressions": 153,
+          "conversions": 0
+        },
+        {
+          "date": "2026-05-06",
+          "spend": 23.42,
+          "clicks": 6,
+          "impressions": 249,
+          "conversions": 0
+        },
+        {
+          "date": "2026-05-07",
+          "spend": 7.94,
+          "clicks": 3,
+          "impressions": 39,
+          "conversions": 0
+        },
+        {
+          "date": "2026-05-08",
+          "spend": 0,
+          "clicks": 0,
+          "impressions": 19,
+          "conversions": 0
+        },
+        {
+          "date": "2026-05-09",
+          "spend": 0,
+          "clicks": 0,
+          "impressions": 30,
+          "conversions": 0
+        },
+        {
+          "date": "2026-05-10",
+          "spend": 0,
+          "clicks": 0,
+          "impressions": 37,
+          "conversions": 0
         }
       ],
       "adGroups": [
-        {
-          "name": "Ad group 1",
-          "campaign": "Local tree Services ads",
-          "clicks": 28,
-          "impressions": 1156,
-          "conversions": 3,
-          "spend": 139.488372,
-          "ctr": 2.422145328719723,
-          "cpc": 4.981727571428572
-        },
         {
           "name": "Tree Planting & Transplanting",
           "campaign": "Lead Search Ads- April 26",
@@ -120,6 +110,36 @@
           "cpc": 0
         },
         {
+          "name": "Ad group 1",
+          "campaign": "Local tree Services ads",
+          "clicks": 11,
+          "impressions": 524,
+          "conversions": 0,
+          "spend": 36.157295,
+          "ctr": 2.099236641221374,
+          "cpc": 3.2870268181818183
+        },
+        {
+          "name": "Tree Removal",
+          "campaign": "STE — Search — May 2026",
+          "clicks": 2,
+          "impressions": 106,
+          "conversions": 0,
+          "spend": 5.45,
+          "ctr": 1.8867924528301887,
+          "cpc": 2.725
+        },
+        {
+          "name": "Tree Trimming & Service",
+          "campaign": "STE — Search — May 2026",
+          "clicks": 1,
+          "impressions": 19,
+          "conversions": 0,
+          "spend": 2.49,
+          "ctr": 5.263157894736842,
+          "cpc": 2.49
+        },
+        {
           "name": "Tree Trimming & Pruning",
           "campaign": "Lead Search Ads- April 26",
           "clicks": 0,
@@ -138,159 +158,79 @@
           "spend": 0,
           "ctr": 0,
           "cpc": 0
-        },
-        {
-          "name": "Tree Removal",
-          "campaign": "STE — Search — May 2026",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Tree Trimming & Service",
-          "campaign": "STE — Search — May 2026",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
         }
       ],
       "keywords": [
         {
-          "keyword": "tree removal",
+          "keyword": "tree planting near me",
           "matchType": 4,
           "adGroup": "Ad group 1",
           "clicks": 4,
-          "impressions": 91,
+          "impressions": 84,
           "conversions": 0,
-          "spend": 39.718818,
-          "ctr": 0.04395604395604396,
-          "cpc": 9.9297045,
-          "cpl": null
-        },
-        {
-          "keyword": "tree removal near me",
-          "matchType": 4,
-          "adGroup": "Ad group 1",
-          "clicks": 6,
-          "impressions": 144,
-          "conversions": 0,
-          "spend": 25.847876,
-          "ctr": 0.041666666666666664,
-          "cpc": 4.307979333333333,
+          "spend": 14.664438,
+          "ctr": 0.047619047619047616,
+          "cpc": 3.6661095,
           "cpl": null
         },
         {
           "keyword": "tree planning",
           "matchType": 4,
           "adGroup": "Ad group 1",
-          "clicks": 2,
-          "impressions": 118,
-          "conversions": 1,
-          "spend": 21.001544,
-          "ctr": 0.01694915254237288,
-          "cpc": 10.500772,
-          "cpl": 21.001544
+          "clicks": 4,
+          "impressions": 98,
+          "conversions": 0,
+          "spend": 9.532857,
+          "ctr": 0.04081632653061224,
+          "cpc": 2.38321425,
+          "cpl": null
         },
         {
-          "keyword": "lawn service in",
-          "matchType": 4,
-          "adGroup": "Ad group 1",
-          "clicks": 2,
-          "impressions": 47,
-          "conversions": 1,
-          "spend": 19.700855,
-          "ctr": 0.0425531914893617,
-          "cpc": 9.8504275,
-          "cpl": 19.700855
-        },
-        {
-          "keyword": "tree specialists",
+          "keyword": "tree removal near me",
           "matchType": 4,
           "adGroup": "Ad group 1",
           "clicks": 2,
-          "impressions": 32,
-          "conversions": 1,
-          "spend": 12.236673,
-          "ctr": 0.0625,
-          "cpc": 6.1183365,
-          "cpl": 12.236673
-        },
-        {
-          "keyword": "planting services",
-          "matchType": 4,
-          "adGroup": "Ad group 1",
-          "clicks": 3,
-          "impressions": 175,
+          "impressions": 42,
           "conversions": 0,
-          "spend": 4.09,
-          "ctr": 0.017142857142857144,
-          "cpc": 1.3633333333333333,
+          "spend": 8.4,
+          "ctr": 0.047619047619047616,
+          "cpc": 4.2,
           "cpl": null
         },
         {
-          "keyword": "landscaping plants and trees",
-          "matchType": 4,
-          "adGroup": "Ad group 1",
-          "clicks": 2,
-          "impressions": 22,
-          "conversions": 0,
-          "spend": 4,
-          "ctr": 0.09090909090909091,
-          "cpc": 2,
-          "cpl": null
-        },
-        {
-          "keyword": "yard and lawn services near me",
-          "matchType": 4,
-          "adGroup": "Ad group 1",
+          "keyword": "tree removal",
+          "matchType": 3,
+          "adGroup": "Tree Removal",
           "clicks": 1,
-          "impressions": 13,
+          "impressions": 78,
           "conversions": 0,
-          "spend": 2.15,
-          "ctr": 0.07692307692307693,
-          "cpc": 2.15,
+          "spend": 2.97,
+          "ctr": 0.01282051282051282,
+          "cpc": 2.97,
           "cpl": null
         },
         {
-          "keyword": "garden and tree services",
-          "matchType": 4,
-          "adGroup": "Ad group 1",
+          "keyword": "tree trimming service",
+          "matchType": 3,
+          "adGroup": "Tree Trimming & Service",
           "clicks": 1,
-          "impressions": 32,
+          "impressions": 1,
           "conversions": 0,
-          "spend": 1.47,
-          "ctr": 0.03125,
-          "cpc": 1.47,
+          "spend": 2.49,
+          "ctr": 1,
+          "cpc": 2.49,
           "cpl": null
         },
         {
-          "keyword": "tree buying near me",
-          "matchType": 4,
-          "adGroup": "Ad group 1",
+          "keyword": "tree cutting service",
+          "matchType": 3,
+          "adGroup": "Tree Removal",
           "clicks": 1,
-          "impressions": 50,
+          "impressions": 7,
           "conversions": 0,
-          "spend": 1.25,
-          "ctr": 0.02,
-          "cpc": 1.25,
-          "cpl": null
-        },
-        {
-          "keyword": "tree planting near me",
-          "matchType": 4,
-          "adGroup": "Ad group 1",
-          "clicks": 1,
-          "impressions": 93,
-          "conversions": 0,
-          "spend": 0.74,
-          "ctr": 0.010752688172043012,
-          "cpc": 0.74,
+          "spend": 2.48,
+          "ctr": 0.14285714285714285,
+          "cpc": 2.48,
           "cpl": null
         },
         {
@@ -298,7 +238,19 @@
           "matchType": 4,
           "adGroup": "Ad group 1",
           "clicks": 0,
-          "impressions": 53,
+          "impressions": 27,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0,
+          "cpl": null
+        },
+        {
+          "keyword": "tree removal",
+          "matchType": 4,
+          "adGroup": "Ad group 1",
+          "clicks": 0,
+          "impressions": 13,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -330,11 +282,23 @@
           "cpl": null
         },
         {
+          "keyword": "tree specialists",
+          "matchType": 4,
+          "adGroup": "Ad group 1",
+          "clicks": 0,
+          "impressions": 16,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0,
+          "cpl": null
+        },
+        {
           "keyword": "tree service",
           "matchType": 3,
           "adGroup": "Ad group 1",
           "clicks": 0,
-          "impressions": 28,
+          "impressions": 20,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -346,7 +310,7 @@
           "matchType": 4,
           "adGroup": "Ad group 1",
           "clicks": 0,
-          "impressions": 4,
+          "impressions": 0,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -358,7 +322,7 @@
           "matchType": 4,
           "adGroup": "Ad group 1",
           "clicks": 0,
-          "impressions": 65,
+          "impressions": 34,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -370,7 +334,7 @@
           "matchType": 4,
           "adGroup": "Ad group 1",
           "clicks": 0,
-          "impressions": 9,
+          "impressions": 0,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -382,7 +346,7 @@
           "matchType": 4,
           "adGroup": "Ad group 1",
           "clicks": 0,
-          "impressions": 13,
+          "impressions": 4,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -402,11 +366,83 @@
           "cpl": null
         },
         {
-          "keyword": "lawn service near",
+          "keyword": "planting services",
+          "matchType": 4,
+          "adGroup": "Ad group 1",
+          "clicks": 0,
+          "impressions": 29,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0,
+          "cpl": null
+        },
+        {
+          "keyword": "landscaping plants and trees",
           "matchType": 4,
           "adGroup": "Ad group 1",
           "clicks": 0,
           "impressions": 15,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0,
+          "cpl": null
+        },
+        {
+          "keyword": "garden and tree services",
+          "matchType": 4,
+          "adGroup": "Ad group 1",
+          "clicks": 0,
+          "impressions": 7,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0,
+          "cpl": null
+        },
+        {
+          "keyword": "lawn service in",
+          "matchType": 4,
+          "adGroup": "Ad group 1",
+          "clicks": 0,
+          "impressions": 19,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0,
+          "cpl": null
+        },
+        {
+          "keyword": "lawn service near",
+          "matchType": 4,
+          "adGroup": "Ad group 1",
+          "clicks": 0,
+          "impressions": 2,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0,
+          "cpl": null
+        },
+        {
+          "keyword": "yard and lawn services near me",
+          "matchType": 4,
+          "adGroup": "Ad group 1",
+          "clicks": 0,
+          "impressions": 22,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0,
+          "cpl": null
+        },
+        {
+          "keyword": "tree buying near me",
+          "matchType": 4,
+          "adGroup": "Ad group 1",
+          "clicks": 0,
+          "impressions": 39,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -930,30 +966,6 @@
           "cpl": null
         },
         {
-          "keyword": "tree cutting service",
-          "matchType": 3,
-          "adGroup": "Tree Removal",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0,
-          "cpl": null
-        },
-        {
-          "keyword": "tree removal",
-          "matchType": 3,
-          "adGroup": "Tree Removal",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0,
-          "cpl": null
-        },
-        {
           "keyword": "pruning",
           "matchType": 3,
           "adGroup": "Tree Removal",
@@ -1018,7 +1030,7 @@
           "matchType": 2,
           "adGroup": "Tree Removal",
           "clicks": 0,
-          "impressions": 0,
+          "impressions": 18,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -1030,7 +1042,7 @@
           "matchType": 2,
           "adGroup": "Tree Removal",
           "clicks": 0,
-          "impressions": 0,
+          "impressions": 3,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -1042,7 +1054,7 @@
           "matchType": 3,
           "adGroup": "Tree Trimming & Service",
           "clicks": 0,
-          "impressions": 0,
+          "impressions": 13,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -1074,18 +1086,6 @@
           "cpl": null
         },
         {
-          "keyword": "tree trimming service",
-          "matchType": 3,
-          "adGroup": "Tree Trimming & Service",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0,
-          "cpl": null
-        },
-        {
           "keyword": "tree pruning service",
           "matchType": 3,
           "adGroup": "Tree Trimming & Service",
@@ -1102,7 +1102,7 @@
           "matchType": 2,
           "adGroup": "Tree Trimming & Service",
           "clicks": 0,
-          "impressions": 0,
+          "impressions": 4,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -1114,7 +1114,7 @@
           "matchType": 2,
           "adGroup": "Tree Trimming & Service",
           "clicks": 0,
-          "impressions": 0,
+          "impressions": 1,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
@@ -1135,11 +1135,11 @@
         "actions": []
       },
       "health": {
-        "score": 60,
+        "score": 45,
         "breakdown": {
           "conversionTracking": 0,
-          "budgetPacing": 5,
-          "cpl": 20,
+          "budgetPacing": 0,
+          "cpl": 10,
           "searchTermWaste": 15,
           "adApprovals": 10,
           "negativeKeywords": 10
@@ -1147,54 +1147,27 @@
       },
       "alerts": {
         "wasteTerms": [],
-        "bidOpportunities": [
-          {
-            "keyword": "tree planning",
-            "matchType": 4,
-            "adGroup": "Ad group 1",
-            "clicks": 2,
-            "impressions": 118,
-            "conversions": 1,
-            "spend": 21.001544,
-            "ctr": 0.01694915254237288,
-            "cpc": 10.500772,
-            "cpl": 21.001544
-          },
-          {
-            "keyword": "lawn service in",
-            "matchType": 4,
-            "adGroup": "Ad group 1",
-            "clicks": 2,
-            "impressions": 47,
-            "conversions": 1,
-            "spend": 19.700855,
-            "ctr": 0.0425531914893617,
-            "cpc": 9.8504275,
-            "cpl": 19.700855
-          },
-          {
-            "keyword": "tree specialists",
-            "matchType": 4,
-            "adGroup": "Ad group 1",
-            "clicks": 2,
-            "impressions": 32,
-            "conversions": 1,
-            "spend": 12.236673,
-            "ctr": 0.0625,
-            "cpc": 6.1183365,
-            "cpl": 12.236673
-          }
-        ],
+        "bidOpportunities": [],
         "underperformingAdGroups": [
           {
             "name": "Ad group 1",
             "campaign": "Local tree Services ads",
-            "clicks": 28,
-            "impressions": 1156,
-            "conversions": 3,
-            "spend": 139.488372,
-            "ctr": 2.422145328719723,
-            "cpc": 4.981727571428572
+            "clicks": 11,
+            "impressions": 524,
+            "conversions": 0,
+            "spend": 36.157295,
+            "ctr": 2.099236641221374,
+            "cpc": 3.2870268181818183
+          },
+          {
+            "name": "Tree Removal",
+            "campaign": "STE — Search — May 2026",
+            "clicks": 2,
+            "impressions": 106,
+            "conversions": 0,
+            "spend": 5.45,
+            "ctr": 1.8867924528301887,
+            "cpc": 2.725
           }
         ]
       }
@@ -1204,19 +1177,19 @@
         "clientId": "mega-roofing",
         "clientName": "Mega Roofing",
         "vertical": "roofing-repair",
-        "weekOf": "2026-04-27",
-        "generatedAt": "2026-05-07T20:09:32.803Z",
+        "weekOf": "2026-05-04",
+        "generatedAt": "2026-05-11T13:49:25.857Z",
         "budget": 450,
         "weeklyBudget": 103.62
       },
       "summary": {
         "thisWeek": {
-          "spend": 0,
-          "clicks": 0,
-          "impressions": 0,
+          "spend": 62.44,
+          "clicks": 15,
+          "impressions": 37,
           "conversions": 0,
-          "ctr": 0,
-          "cpc": 0,
+          "ctr": 40.54,
+          "cpc": 4.16,
           "cpl": 0
         },
         "prevWeek": {
@@ -1227,37 +1200,46 @@
           "cpl": 0
         },
         "delta": {
-          "spend": 0,
+          "spend": 62.44,
           "leads": 0,
           "cpl": 0,
           "spendPct": 0,
           "leadsPct": 0,
           "cplPct": 0
         },
-        "pacing": 0
+        "pacing": 60
       },
-      "daily": [],
+      "daily": [
+        {
+          "date": "2026-05-07",
+          "spend": 16.41,
+          "clicks": 3,
+          "impressions": 9,
+          "conversions": 0
+        },
+        {
+          "date": "2026-05-08",
+          "spend": 13.96,
+          "clicks": 4,
+          "impressions": 8,
+          "conversions": 0
+        },
+        {
+          "date": "2026-05-09",
+          "spend": 17.27,
+          "clicks": 4,
+          "impressions": 8,
+          "conversions": 0
+        },
+        {
+          "date": "2026-05-10",
+          "spend": 14.8,
+          "clicks": 4,
+          "impressions": 12,
+          "conversions": 0
+        }
+      ],
       "adGroups": [
-        {
-          "name": "Ad group 1",
-          "campaign": "Megaroofing Doble ad 1",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Ad group 1",
-          "campaign": "mega doble phone call conversion ad",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
         {
           "name": "Ad group 1",
           "campaign": "Sales-Search-5 Doble",
@@ -1270,17 +1252,7 @@
         },
         {
           "name": "Ad group 1",
-          "campaign": "Sales-Search-7 hail storm area1",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Ad group 1",
-          "campaign": "Lead form ad doble",
+          "campaign": "Megaroofing Doble ad 1",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
@@ -1300,7 +1272,37 @@
         },
         {
           "name": "Ad group 1",
+          "campaign": "mega doble phone call conversion ad",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
+        },
+        {
+          "name": "Ad group 1",
+          "campaign": "Sales-Search-7 hail storm area1",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
+        },
+        {
+          "name": "Ad group 1",
           "campaign": "Search-13 aug 7",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
+        },
+        {
+          "name": "Ad group 1",
+          "campaign": "Lead form ad doble",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
@@ -1359,26 +1361,6 @@
           "cpc": 0
         },
         {
-          "name": "Ad group 1",
-          "campaign": "PHONE CALL NEW AD",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
-          "name": "Quality Roofing Services in St. Cloud, Florida",
-          "campaign": "Feb 19 Doble Phone Call Ad",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0
-        },
-        {
           "name": "Roof Repair",
           "campaign": "Website Leads Mar026",
           "clicks": 0,
@@ -1391,6 +1373,16 @@
         {
           "name": "Cost / Estimate",
           "campaign": "Website Leads Mar026",
+          "clicks": 0,
+          "impressions": 0,
+          "conversions": 0,
+          "spend": 0,
+          "ctr": 0,
+          "cpc": 0
+        },
+        {
+          "name": "Quality Roofing Services in St. Cloud, Florida",
+          "campaign": "Feb 19 Doble Phone Call Ad",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
@@ -1429,17 +1421,63 @@
           "cpc": 0
         },
         {
-          "name": "Roof Repair",
-          "campaign": "MR — Search — Roof Repair — May 2026",
+          "name": "Ad group 1",
+          "campaign": "PHONE CALL NEW AD",
           "clicks": 0,
           "impressions": 0,
           "conversions": 0,
           "spend": 0,
           "ctr": 0,
           "cpc": 0
+        },
+        {
+          "name": "Roof Repair",
+          "campaign": "MR — Search — Roof Repair — May 2026",
+          "clicks": 15,
+          "impressions": 37,
+          "conversions": 0,
+          "spend": 62.44,
+          "ctr": 40.54054054054054,
+          "cpc": 4.1626666666666665
         }
       ],
       "keywords": [
+        {
+          "keyword": "roof repair near me",
+          "matchType": 2,
+          "adGroup": "Roof Repair",
+          "clicks": 7,
+          "impressions": 23,
+          "conversions": 0,
+          "spend": 25.23,
+          "ctr": 0.30434782608695654,
+          "cpc": 3.604285714285714,
+          "cpl": null
+        },
+        {
+          "keyword": "roof leak repair",
+          "matchType": 2,
+          "adGroup": "Roof Repair",
+          "clicks": 5,
+          "impressions": 9,
+          "conversions": 0,
+          "spend": 20.8,
+          "ctr": 0.5555555555555556,
+          "cpc": 4.16,
+          "cpl": null
+        },
+        {
+          "keyword": "roofer near me",
+          "matchType": 3,
+          "adGroup": "Roof Repair",
+          "clicks": 3,
+          "impressions": 5,
+          "conversions": 0,
+          "spend": 16.41,
+          "ctr": 0.6,
+          "cpc": 5.47,
+          "cpl": null
+        },
         {
           "keyword": "roofing services",
           "matchType": 4,
@@ -16705,18 +16743,6 @@
           "cpl": null
         },
         {
-          "keyword": "roof leak repair",
-          "matchType": 2,
-          "adGroup": "Roof Repair",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0,
-          "cpl": null
-        },
-        {
           "keyword": "emergency roof repair",
           "matchType": 2,
           "adGroup": "Roof Repair",
@@ -16739,36 +16765,27 @@
           "ctr": 0,
           "cpc": 0,
           "cpl": null
-        },
-        {
-          "keyword": "roof repair near me",
-          "matchType": 2,
-          "adGroup": "Roof Repair",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0,
-          "cpl": null
-        },
-        {
-          "keyword": "roofer near me",
-          "matchType": 3,
-          "adGroup": "Roof Repair",
-          "clicks": 0,
-          "impressions": 0,
-          "conversions": 0,
-          "spend": 0,
-          "ctr": 0,
-          "cpc": 0,
-          "cpl": null
         }
       ],
       "searchTerms": {
-        "waste": [],
-        "wastePct": 0,
-        "wasteSpend": 0
+        "waste": [
+          {
+            "term": "roof leak repairs",
+            "clicks": 4,
+            "spend": 16.89,
+            "campaign": "MR — Search — Roof Repair — May 2026",
+            "adGroup": "Roof Repair"
+          },
+          {
+            "term": "roofing contractors in my area",
+            "clicks": 3,
+            "spend": 8.87,
+            "campaign": "MR — Search — Roof Repair — May 2026",
+            "adGroup": "Roof Repair"
+          }
+        ],
+        "wastePct": 41.3,
+        "wasteSpend": 25.76
       },
       "ads": {
         "disapproved": 0
@@ -16778,18 +16795,33 @@
         "actions": []
       },
       "health": {
-        "score": 45,
+        "score": 35,
         "breakdown": {
           "conversionTracking": 0,
-          "budgetPacing": 0,
+          "budgetPacing": 5,
           "cpl": 10,
-          "searchTermWaste": 15,
+          "searchTermWaste": 0,
           "adApprovals": 10,
           "negativeKeywords": 10
         }
       },
       "alerts": {
-        "wasteTerms": [],
+        "wasteTerms": [
+          {
+            "term": "roof leak repairs",
+            "clicks": 4,
+            "spend": 16.89,
+            "campaign": "MR — Search — Roof Repair — May 2026",
+            "adGroup": "Roof Repair"
+          },
+          {
+            "term": "roofing contractors in my area",
+            "clicks": 3,
+            "spend": 8.87,
+            "campaign": "MR — Search — Roof Repair — May 2026",
+            "adGroup": "Roof Repair"
+          }
+        ],
         "bidOpportunities": [],
         "underperformingAdGroups": []
       }
@@ -16800,110 +16832,149 @@
       "platform": "meta",
       "accountId": "1523727968790479",
       "accountName": "LocalEyes Pro — Lead Gen",
-      "weekOf": "2026-04-27",
-      "generatedAt": "2026-05-07T20:09:36.036Z",
+      "weekOf": "2026-05-04",
+      "generatedAt": "2026-05-11T13:49:31.072Z",
       "budget": 500,
       "weeklyBudget": 115.13
     },
     "summary": {
       "thisWeek": {
+        "spend": 108.8,
+        "impressions": 3052,
+        "clicks": 49,
+        "ctr": 1.61,
+        "cpc": 2.22,
+        "leads": 2,
+        "cpl": 54.4
+      },
+      "prevWeek": {
         "spend": 65.47,
         "impressions": 2301,
         "clicks": 26,
-        "ctr": 1.13,
-        "cpc": 2.52,
         "leads": 1,
         "cpl": 65.47
       },
-      "prevWeek": {
-        "spend": 69.01,
-        "impressions": 1566,
-        "clicks": 22,
-        "leads": 2,
-        "cpl": 34.51
-      },
       "delta": {
-        "spend": -3.54,
-        "leads": -1,
-        "cpl": 30.96,
-        "spendPct": -5.13,
-        "leadsPct": -50,
-        "cplPct": 89.74
+        "spend": 43.33,
+        "leads": 1,
+        "cpl": -11.07,
+        "spendPct": 66.18,
+        "leadsPct": 100,
+        "cplPct": -16.91
       },
-      "pacing": 57
+      "pacing": 95
     },
     "daily": [
       {
-        "date": "2026-04-27",
-        "spend": 10.01,
-        "impressions": 312,
-        "clicks": 6,
-        "leads": 0
-      },
-      {
-        "date": "2026-04-28",
-        "spend": 10.79,
-        "impressions": 325,
-        "clicks": 3,
-        "leads": 0
-      },
-      {
-        "date": "2026-04-29",
-        "spend": 12.23,
-        "impressions": 381,
-        "clicks": 8,
-        "leads": 1
-      },
-      {
-        "date": "2026-04-30",
-        "spend": 9.31,
-        "impressions": 430,
-        "clicks": 5,
-        "leads": 0
-      },
-      {
-        "date": "2026-05-01",
-        "spend": 7.69,
-        "impressions": 383,
-        "clicks": 1,
-        "leads": 0
-      },
-      {
-        "date": "2026-05-02",
-        "spend": 5.27,
-        "impressions": 206,
+        "date": "2026-05-04",
+        "spend": 10.93,
+        "impressions": 292,
         "clicks": 2,
         "leads": 0
       },
       {
-        "date": "2026-05-03",
-        "spend": 10.17,
-        "impressions": 264,
-        "clicks": 1,
+        "date": "2026-05-05",
+        "spend": 9.89,
+        "impressions": 245,
+        "clicks": 4,
+        "leads": 0
+      },
+      {
+        "date": "2026-05-06",
+        "spend": 10.28,
+        "impressions": 294,
+        "clicks": 5,
+        "leads": 0
+      },
+      {
+        "date": "2026-05-07",
+        "spend": 13.54,
+        "impressions": 408,
+        "clicks": 9,
+        "leads": 1
+      },
+      {
+        "date": "2026-05-08",
+        "spend": 21.61,
+        "impressions": 777,
+        "clicks": 10,
+        "leads": 1
+      },
+      {
+        "date": "2026-05-09",
+        "spend": 20.51,
+        "impressions": 621,
+        "clicks": 11,
+        "leads": 0
+      },
+      {
+        "date": "2026-05-10",
+        "spend": 22.04,
+        "impressions": 415,
+        "clicks": 8,
         "leads": 0
       }
     ],
     "campaigns": [
       {
-        "name": "Tree Service Anya New",
+        "name": "TOF | Leads | InstantForm (V1)",
         "id": "120242239161050742",
-        "spend": 65.47,
-        "impressions": 2301,
-        "clicks": 26,
+        "spend": 41.03,
+        "impressions": 1125,
+        "clicks": 18,
         "leads": 1,
-        "cpl": 65.47
+        "cpl": 41.03
+      },
+      {
+        "name": "TOF | LEADS | InstantForm (V2)",
+        "id": "120246145114400742",
+        "spend": 67.77,
+        "impressions": 1927,
+        "clicks": 31,
+        "leads": 1,
+        "cpl": 67.77
       }
     ],
     "adsets": [
       {
         "name": "Just FB Ad Set",
         "id": "120242239161060742",
-        "campaign": "Tree Service Anya New",
-        "spend": 65.47,
-        "impressions": 2301,
-        "clicks": 26,
+        "campaign": "TOF | Leads | InstantForm (V1)",
+        "spend": 41.03,
+        "impressions": 1125,
+        "clicks": 18,
         "leads": 1,
-        "cpl": 65.47
+        "cpl": 41.03
+      },
+      {
+        "name": "LAL | 1% | Phone",
+        "id": "120246145114420742",
+        "campaign": "TOF | LEADS | InstantForm (V2)",
+        "spend": 18.34,
+        "impressions": 571,
+        "clicks": 3,
+        "leads": 0,
+        "cpl": 0
+      },
+      {
+        "name": "LAL | 1% | Email",
+        "id": "120246145292750742",
+        "campaign": "TOF | LEADS | InstantForm (V2)",
+        "spend": 21.72,
+        "impressions": 437,
+        "clicks": 10,
+        "leads": 0,
+        "cpl": 0
+      },
+      {
+        "name": "Interest | Tree + Biz",
+        "id": "120246145312660742",
+        "campaign": "TOF | LEADS | InstantForm (V2)",
+        "spend": 27.71,
+        "impressions": 919,
+        "clicks": 18,
+        "leads": 1,
+        "cpl": 27.71
       }
     ],
     "ads": [
@@ -16911,12 +16982,45 @@
         "name": "New Leads Ad",
         "id": "120242239161070742",
         "adset": "Just FB Ad Set",
-        "campaign": "Tree Service Anya New",
-        "spend": 65.47,
-        "impressions": 2301,
-        "clicks": 26,
+        "campaign": "TOF | Leads | InstantForm (V1)",
+        "spend": 41.03,
+        "impressions": 1125,
+        "clicks": 18,
         "leads": 1,
-        "cpl": 65.47
+        "cpl": 41.03
+      },
+      {
+        "name": "Growth Hook",
+        "id": "120246145114410742",
+        "adset": "LAL | 1% | Phone",
+        "campaign": "TOF | LEADS | InstantForm (V2)",
+        "spend": 18.34,
+        "impressions": 571,
+        "clicks": 3,
+        "leads": 0,
+        "cpl": 0
+      },
+      {
+        "name": "Growth Hook",
+        "id": "120246147207670742",
+        "adset": "Interest | Tree + Biz",
+        "campaign": "TOF | LEADS | InstantForm (V2)",
+        "spend": 27.71,
+        "impressions": 919,
+        "clicks": 18,
+        "leads": 1,
+        "cpl": 27.71
+      },
+      {
+        "name": "Growth Hook",
+        "id": "120246147207680742",
+        "adset": "LAL | 1% | Email",
+        "campaign": "TOF | LEADS | InstantForm (V2)",
+        "spend": 21.72,
+        "impressions": 437,
+        "clicks": 10,
+        "leads": 0,
+        "cpl": 0
       }
     ]
   }

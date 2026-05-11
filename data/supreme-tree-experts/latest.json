@@ -3,100 +3,90 @@
     "clientId": "supreme-tree-experts",
     "clientName": "Supreme Tree Experts",
     "vertical": "tree-service",
-    "weekOf": "2026-04-27",
-    "generatedAt": "2026-05-07T20:09:29.160Z",
+    "weekOf": "2026-05-04",
+    "generatedAt": "2026-05-11T13:49:20.530Z",
     "budget": 450,
     "weeklyBudget": 103.62
   },
   "summary": {
     "thisWeek": {
+      "spend": 44.1,
+      "clicks": 14,
+      "impressions": 649,
+      "conversions": 0,
+      "ctr": 2.16,
+      "cpc": 3.15,
+      "cpl": 0
+    },
+    "prevWeek": {
       "spend": 139.49,
       "clicks": 28,
       "impressions": 1156,
       "conversions": 3,
-      "ctr": 2.42,
-      "cpc": 4.98,
       "cpl": 46.5
     },
-    "prevWeek": {
-      "spend": 121.98,
-      "clicks": 40,
-      "impressions": 2965,
-      "conversions": 0,
-      "cpl": 0
-    },
     "delta": {
-      "spend": 17.51,
-      "leads": 3,
-      "cpl": 46.5,
-      "spendPct": 14.35,
-      "leadsPct": 0,
-      "cplPct": 0
+      "spend": -95.39,
+      "leads": -3,
+      "cpl": -46.5,
+      "spendPct": -68.39,
+      "leadsPct": -100,
+      "cplPct": -100
     },
-    "pacing": 135
+    "pacing": 43
   },
   "daily": [
     {
-      "date": "2026-04-27",
-      "spend": 33.1,
-      "clicks": 7,
-      "impressions": 346,
-      "conversions": 0
-    },
-    {
-      "date": "2026-04-28",
-      "spend": 14.45,
-      "clicks": 7,
-      "impressions": 352,
-      "conversions": 0
-    },
-    {
-      "date": "2026-04-29",
-      "spend": 25.69,
-      "clicks": 2,
-      "impressions": 98,
-      "conversions": 1
-    },
-    {
-      "date": "2026-04-30",
-      "spend": 20.36,
+      "date": "2026-05-04",
+      "spend": 6.45,
       "clicks": 4,
-      "impressions": 114,
+      "impressions": 122,
       "conversions": 0
     },
     {
-      "date": "2026-05-01",
-      "spend": 21.34,
-      "clicks": 3,
-      "impressions": 71,
-      "conversions": 1
-    },
-    {
-      "date": "2026-05-02",
-      "spend": 13.95,
-      "clicks": 4,
-      "impressions": 157,
-      "conversions": 0
-    },
-    {
-      "date": "2026-05-03",
-      "spend": 10.59,
+      "date": "2026-05-05",
+      "spend": 6.29,
       "clicks": 1,
-      "impressions": 18,
-      "conversions": 1
+      "impressions": 153,
+      "conversions": 0
+    },
+    {
+      "date": "2026-05-06",
+      "spend": 23.42,
+      "clicks": 6,
+      "impressions": 249,
+      "conversions": 0
+    },
+    {
+      "date": "2026-05-07",
+      "spend": 7.94,
+      "clicks": 3,
+      "impressions": 39,
+      "conversions": 0
+    },
+    {
+      "date": "2026-05-08",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 19,
+      "conversions": 0
+    },
+    {
+      "date": "2026-05-09",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 30,
+      "conversions": 0
+    },
+    {
+      "date": "2026-05-10",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 37,
+      "conversions": 0
     }
   ],
   "adGroups": [
-    {
-      "name": "Ad group 1",
-      "campaign": "Local tree Services ads",
-      "clicks": 28,
-      "impressions": 1156,
-      "conversions": 3,
-      "spend": 139.488372,
-      "ctr": 2.422145328719723,
-      "cpc": 4.981727571428572
-    },
     {
       "name": "Tree Planting & Transplanting",
       "campaign": "Lead Search Ads- April 26",
@@ -118,6 +108,36 @@
       "cpc": 0
     },
     {
+      "name": "Ad group 1",
+      "campaign": "Local tree Services ads",
+      "clicks": 11,
+      "impressions": 524,
+      "conversions": 0,
+      "spend": 36.157295,
+      "ctr": 2.099236641221374,
+      "cpc": 3.2870268181818183
+    },
+    {
+      "name": "Tree Removal",
+      "campaign": "STE — Search — May 2026",
+      "clicks": 2,
+      "impressions": 106,
+      "conversions": 0,
+      "spend": 5.45,
+      "ctr": 1.8867924528301887,
+      "cpc": 2.725
+    },
+    {
+      "name": "Tree Trimming & Service",
+      "campaign": "STE — Search — May 2026",
+      "clicks": 1,
+      "impressions": 19,
+      "conversions": 0,
+      "spend": 2.49,
+      "ctr": 5.263157894736842,
+      "cpc": 2.49
+    },
+    {
       "name": "Tree Trimming & Pruning",
       "campaign": "Lead Search Ads- April 26",
       "clicks": 0,
@@ -136,159 +156,79 @@
       "spend": 0,
       "ctr": 0,
       "cpc": 0
-    },
-    {
-      "name": "Tree Removal",
-      "campaign": "STE — Search — May 2026",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
-      "name": "Tree Trimming & Service",
-      "campaign": "STE — Search — May 2026",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
     }
   ],
   "keywords": [
     {
-      "keyword": "tree removal",
+      "keyword": "tree planting near me",
       "matchType": 4,
       "adGroup": "Ad group 1",
       "clicks": 4,
-      "impressions": 91,
+      "impressions": 84,
       "conversions": 0,
-      "spend": 39.718818,
-      "ctr": 0.04395604395604396,
-      "cpc": 9.9297045,
-      "cpl": null
-    },
-    {
-      "keyword": "tree removal near me",
-      "matchType": 4,
-      "adGroup": "Ad group 1",
-      "clicks": 6,
-      "impressions": 144,
-      "conversions": 0,
-      "spend": 25.847876,
-      "ctr": 0.041666666666666664,
-      "cpc": 4.307979333333333,
+      "spend": 14.664438,
+      "ctr": 0.047619047619047616,
+      "cpc": 3.6661095,
       "cpl": null
     },
     {
       "keyword": "tree planning",
       "matchType": 4,
       "adGroup": "Ad group 1",
-      "clicks": 2,
-      "impressions": 118,
-      "conversions": 1,
-      "spend": 21.001544,
-      "ctr": 0.01694915254237288,
-      "cpc": 10.500772,
-      "cpl": 21.001544
+      "clicks": 4,
+      "impressions": 98,
+      "conversions": 0,
+      "spend": 9.532857,
+      "ctr": 0.04081632653061224,
+      "cpc": 2.38321425,
+      "cpl": null
     },
     {
-      "keyword": "lawn service in",
-      "matchType": 4,
-      "adGroup": "Ad group 1",
-      "clicks": 2,
-      "impressions": 47,
-      "conversions": 1,
-      "spend": 19.700855,
-      "ctr": 0.0425531914893617,
-      "cpc": 9.8504275,
-      "cpl": 19.700855
-    },
-    {
-      "keyword": "tree specialists",
+      "keyword": "tree removal near me",
       "matchType": 4,
       "adGroup": "Ad group 1",
       "clicks": 2,
-      "impressions": 32,
-      "conversions": 1,
-      "spend": 12.236673,
-      "ctr": 0.0625,
-      "cpc": 6.1183365,
-      "cpl": 12.236673
-    },
-    {
-      "keyword": "planting services",
-      "matchType": 4,
-      "adGroup": "Ad group 1",
-      "clicks": 3,
-      "impressions": 175,
+      "impressions": 42,
       "conversions": 0,
-      "spend": 4.09,
-      "ctr": 0.017142857142857144,
-      "cpc": 1.3633333333333333,
+      "spend": 8.4,
+      "ctr": 0.047619047619047616,
+      "cpc": 4.2,
       "cpl": null
     },
     {
-      "keyword": "landscaping plants and trees",
-      "matchType": 4,
-      "adGroup": "Ad group 1",
-      "clicks": 2,
-      "impressions": 22,
-      "conversions": 0,
-      "spend": 4,
-      "ctr": 0.09090909090909091,
-      "cpc": 2,
-      "cpl": null
-    },
-    {
-      "keyword": "yard and lawn services near me",
-      "matchType": 4,
-      "adGroup": "Ad group 1",
+      "keyword": "tree removal",
+      "matchType": 3,
+      "adGroup": "Tree Removal",
       "clicks": 1,
-      "impressions": 13,
+      "impressions": 78,
       "conversions": 0,
-      "spend": 2.15,
-      "ctr": 0.07692307692307693,
-      "cpc": 2.15,
+      "spend": 2.97,
+      "ctr": 0.01282051282051282,
+      "cpc": 2.97,
       "cpl": null
     },
     {
-      "keyword": "garden and tree services",
-      "matchType": 4,
-      "adGroup": "Ad group 1",
+      "keyword": "tree trimming service",
+      "matchType": 3,
+      "adGroup": "Tree Trimming & Service",
       "clicks": 1,
-      "impressions": 32,
+      "impressions": 1,
       "conversions": 0,
-      "spend": 1.47,
-      "ctr": 0.03125,
-      "cpc": 1.47,
+      "spend": 2.49,
+      "ctr": 1,
+      "cpc": 2.49,
       "cpl": null
     },
     {
-      "keyword": "tree buying near me",
-      "matchType": 4,
-      "adGroup": "Ad group 1",
+      "keyword": "tree cutting service",
+      "matchType": 3,
+      "adGroup": "Tree Removal",
       "clicks": 1,
-      "impressions": 50,
+      "impressions": 7,
       "conversions": 0,
-      "spend": 1.25,
-      "ctr": 0.02,
-      "cpc": 1.25,
-      "cpl": null
-    },
-    {
-      "keyword": "tree planting near me",
-      "matchType": 4,
-      "adGroup": "Ad group 1",
-      "clicks": 1,
-      "impressions": 93,
-      "conversions": 0,
-      "spend": 0.74,
-      "ctr": 0.010752688172043012,
-      "cpc": 0.74,
+      "spend": 2.48,
+      "ctr": 0.14285714285714285,
+      "cpc": 2.48,
       "cpl": null
     },
     {
@@ -296,7 +236,19 @@
       "matchType": 4,
       "adGroup": "Ad group 1",
       "clicks": 0,
-      "impressions": 53,
+      "impressions": 27,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0,
+      "cpl": null
+    },
+    {
+      "keyword": "tree removal",
+      "matchType": 4,
+      "adGroup": "Ad group 1",
+      "clicks": 0,
+      "impressions": 13,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -328,11 +280,23 @@
       "cpl": null
     },
     {
+      "keyword": "tree specialists",
+      "matchType": 4,
+      "adGroup": "Ad group 1",
+      "clicks": 0,
+      "impressions": 16,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0,
+      "cpl": null
+    },
+    {
       "keyword": "tree service",
       "matchType": 3,
       "adGroup": "Ad group 1",
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 20,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -344,7 +308,7 @@
       "matchType": 4,
       "adGroup": "Ad group 1",
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 0,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -356,7 +320,7 @@
       "matchType": 4,
       "adGroup": "Ad group 1",
       "clicks": 0,
-      "impressions": 65,
+      "impressions": 34,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -368,7 +332,7 @@
       "matchType": 4,
       "adGroup": "Ad group 1",
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 0,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -380,7 +344,7 @@
       "matchType": 4,
       "adGroup": "Ad group 1",
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 4,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -400,11 +364,83 @@
       "cpl": null
     },
     {
-      "keyword": "lawn service near",
+      "keyword": "planting services",
+      "matchType": 4,
+      "adGroup": "Ad group 1",
+      "clicks": 0,
+      "impressions": 29,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0,
+      "cpl": null
+    },
+    {
+      "keyword": "landscaping plants and trees",
       "matchType": 4,
       "adGroup": "Ad group 1",
       "clicks": 0,
       "impressions": 15,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0,
+      "cpl": null
+    },
+    {
+      "keyword": "garden and tree services",
+      "matchType": 4,
+      "adGroup": "Ad group 1",
+      "clicks": 0,
+      "impressions": 7,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0,
+      "cpl": null
+    },
+    {
+      "keyword": "lawn service in",
+      "matchType": 4,
+      "adGroup": "Ad group 1",
+      "clicks": 0,
+      "impressions": 19,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0,
+      "cpl": null
+    },
+    {
+      "keyword": "lawn service near",
+      "matchType": 4,
+      "adGroup": "Ad group 1",
+      "clicks": 0,
+      "impressions": 2,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0,
+      "cpl": null
+    },
+    {
+      "keyword": "yard and lawn services near me",
+      "matchType": 4,
+      "adGroup": "Ad group 1",
+      "clicks": 0,
+      "impressions": 22,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0,
+      "cpl": null
+    },
+    {
+      "keyword": "tree buying near me",
+      "matchType": 4,
+      "adGroup": "Ad group 1",
+      "clicks": 0,
+      "impressions": 39,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -928,30 +964,6 @@
       "cpl": null
     },
     {
-      "keyword": "tree cutting service",
-      "matchType": 3,
-      "adGroup": "Tree Removal",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0,
-      "cpl": null
-    },
-    {
-      "keyword": "tree removal",
-      "matchType": 3,
-      "adGroup": "Tree Removal",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0,
-      "cpl": null
-    },
-    {
       "keyword": "pruning",
       "matchType": 3,
       "adGroup": "Tree Removal",
@@ -1016,7 +1028,7 @@
       "matchType": 2,
       "adGroup": "Tree Removal",
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 18,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -1028,7 +1040,7 @@
       "matchType": 2,
       "adGroup": "Tree Removal",
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 3,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -1040,7 +1052,7 @@
       "matchType": 3,
       "adGroup": "Tree Trimming & Service",
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 13,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -1072,18 +1084,6 @@
       "cpl": null
     },
     {
-      "keyword": "tree trimming service",
-      "matchType": 3,
-      "adGroup": "Tree Trimming & Service",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0,
-      "cpl": null
-    },
-    {
       "keyword": "tree pruning service",
       "matchType": 3,
       "adGroup": "Tree Trimming & Service",
@@ -1100,7 +1100,7 @@
       "matchType": 2,
       "adGroup": "Tree Trimming & Service",
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 4,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -1112,7 +1112,7 @@
       "matchType": 2,
       "adGroup": "Tree Trimming & Service",
       "clicks": 0,
-      "impressions": 0,
+      "impressions": 1,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
@@ -1133,11 +1133,11 @@
     "actions": []
   },
   "health": {
-    "score": 60,
+    "score": 45,
     "breakdown": {
       "conversionTracking": 0,
-      "budgetPacing": 5,
-      "cpl": 20,
+      "budgetPacing": 0,
+      "cpl": 10,
       "searchTermWaste": 15,
       "adApprovals": 10,
       "negativeKeywords": 10
@@ -1145,54 +1145,27 @@
   },
   "alerts": {
     "wasteTerms": [],
-    "bidOpportunities": [
-      {
-        "keyword": "tree planning",
-        "matchType": 4,
-        "adGroup": "Ad group 1",
-        "clicks": 2,
-        "impressions": 118,
-        "conversions": 1,
-        "spend": 21.001544,
-        "ctr": 0.01694915254237288,
-        "cpc": 10.500772,
-        "cpl": 21.001544
-      },
-      {
-        "keyword": "lawn service in",
-        "matchType": 4,
-        "adGroup": "Ad group 1",
-        "clicks": 2,
-        "impressions": 47,
-        "conversions": 1,
-        "spend": 19.700855,
-        "ctr": 0.0425531914893617,
-        "cpc": 9.8504275,
-        "cpl": 19.700855
-      },
-      {
-        "keyword": "tree specialists",
-        "matchType": 4,
-        "adGroup": "Ad group 1",
-        "clicks": 2,
-        "impressions": 32,
-        "conversions": 1,
-        "spend": 12.236673,
-        "ctr": 0.0625,
-        "cpc": 6.1183365,
-        "cpl": 12.236673
-      }
-    ],
+    "bidOpportunities": [],
     "underperformingAdGroups": [
       {
         "name": "Ad group 1",
         "campaign": "Local tree Services ads",
-        "clicks": 28,
-        "impressions": 1156,
-        "conversions": 3,
-        "spend": 139.488372,
-        "ctr": 2.422145328719723,
-        "cpc": 4.981727571428572
+        "clicks": 11,
+        "impressions": 524,
+        "conversions": 0,
+        "spend": 36.157295,
+        "ctr": 2.099236641221374,
+        "cpc": 3.2870268181818183
+      },
+      {
+        "name": "Tree Removal",
+        "campaign": "STE — Search — May 2026",
+        "clicks": 2,
+        "impressions": 106,
+        "conversions": 0,
+        "spend": 5.45,
+        "ctr": 1.8867924528301887,
+        "cpc": 2.725
       }
     ]
   }

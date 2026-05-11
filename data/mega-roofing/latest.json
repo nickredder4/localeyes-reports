@@ -3,19 +3,19 @@
     "clientId": "mega-roofing",
     "clientName": "Mega Roofing",
     "vertical": "roofing-repair",
-    "weekOf": "2026-04-27",
-    "generatedAt": "2026-05-07T20:09:32.803Z",
+    "weekOf": "2026-05-04",
+    "generatedAt": "2026-05-11T13:49:25.857Z",
     "budget": 450,
     "weeklyBudget": 103.62
   },
   "summary": {
     "thisWeek": {
-      "spend": 0,
-      "clicks": 0,
-      "impressions": 0,
+      "spend": 62.44,
+      "clicks": 15,
+      "impressions": 37,
       "conversions": 0,
-      "ctr": 0,
-      "cpc": 0,
+      "ctr": 40.54,
+      "cpc": 4.16,
       "cpl": 0
     },
     "prevWeek": {
@@ -26,37 +26,46 @@
       "cpl": 0
     },
     "delta": {
-      "spend": 0,
+      "spend": 62.44,
       "leads": 0,
       "cpl": 0,
       "spendPct": 0,
       "leadsPct": 0,
       "cplPct": 0
     },
-    "pacing": 0
+    "pacing": 60
   },
-  "daily": [],
+  "daily": [
+    {
+      "date": "2026-05-07",
+      "spend": 16.41,
+      "clicks": 3,
+      "impressions": 9,
+      "conversions": 0
+    },
+    {
+      "date": "2026-05-08",
+      "spend": 13.96,
+      "clicks": 4,
+      "impressions": 8,
+      "conversions": 0
+    },
+    {
+      "date": "2026-05-09",
+      "spend": 17.27,
+      "clicks": 4,
+      "impressions": 8,
+      "conversions": 0
+    },
+    {
+      "date": "2026-05-10",
+      "spend": 14.8,
+      "clicks": 4,
+      "impressions": 12,
+      "conversions": 0
+    }
+  ],
   "adGroups": [
-    {
-      "name": "Ad group 1",
-      "campaign": "Megaroofing Doble ad 1",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
-      "name": "Ad group 1",
-      "campaign": "mega doble phone call conversion ad",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
     {
       "name": "Ad group 1",
       "campaign": "Sales-Search-5 Doble",
@@ -69,17 +78,7 @@
     },
     {
       "name": "Ad group 1",
-      "campaign": "Sales-Search-7 hail storm area1",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
-      "name": "Ad group 1",
-      "campaign": "Lead form ad doble",
+      "campaign": "Megaroofing Doble ad 1",
       "clicks": 0,
       "impressions": 0,
       "conversions": 0,
@@ -99,7 +98,37 @@
     },
     {
       "name": "Ad group 1",
+      "campaign": "mega doble phone call conversion ad",
+      "clicks": 0,
+      "impressions": 0,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0
+    },
+    {
+      "name": "Ad group 1",
+      "campaign": "Sales-Search-7 hail storm area1",
+      "clicks": 0,
+      "impressions": 0,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0
+    },
+    {
+      "name": "Ad group 1",
       "campaign": "Search-13 aug 7",
+      "clicks": 0,
+      "impressions": 0,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0
+    },
+    {
+      "name": "Ad group 1",
+      "campaign": "Lead form ad doble",
       "clicks": 0,
       "impressions": 0,
       "conversions": 0,
@@ -158,26 +187,6 @@
       "cpc": 0
     },
     {
-      "name": "Ad group 1",
-      "campaign": "PHONE CALL NEW AD",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
-      "name": "Quality Roofing Services in St. Cloud, Florida",
-      "campaign": "Feb 19 Doble Phone Call Ad",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0
-    },
-    {
       "name": "Roof Repair",
       "campaign": "Website Leads Mar026",
       "clicks": 0,
@@ -190,6 +199,16 @@
     {
       "name": "Cost / Estimate",
       "campaign": "Website Leads Mar026",
+      "clicks": 0,
+      "impressions": 0,
+      "conversions": 0,
+      "spend": 0,
+      "ctr": 0,
+      "cpc": 0
+    },
+    {
+      "name": "Quality Roofing Services in St. Cloud, Florida",
+      "campaign": "Feb 19 Doble Phone Call Ad",
       "clicks": 0,
       "impressions": 0,
       "conversions": 0,
@@ -228,17 +247,63 @@
       "cpc": 0
     },
     {
-      "name": "Roof Repair",
-      "campaign": "MR — Search — Roof Repair — May 2026",
+      "name": "Ad group 1",
+      "campaign": "PHONE CALL NEW AD",
       "clicks": 0,
       "impressions": 0,
       "conversions": 0,
       "spend": 0,
       "ctr": 0,
       "cpc": 0
+    },
+    {
+      "name": "Roof Repair",
+      "campaign": "MR — Search — Roof Repair — May 2026",
+      "clicks": 15,
+      "impressions": 37,
+      "conversions": 0,
+      "spend": 62.44,
+      "ctr": 40.54054054054054,
+      "cpc": 4.1626666666666665
     }
   ],
   "keywords": [
+    {
+      "keyword": "roof repair near me",
+      "matchType": 2,
+      "adGroup": "Roof Repair",
+      "clicks": 7,
+      "impressions": 23,
+      "conversions": 0,
+      "spend": 25.23,
+      "ctr": 0.30434782608695654,
+      "cpc": 3.604285714285714,
+      "cpl": null
+    },
+    {
+      "keyword": "roof leak repair",
+      "matchType": 2,
+      "adGroup": "Roof Repair",
+      "clicks": 5,
+      "impressions": 9,
+      "conversions": 0,
+      "spend": 20.8,
+      "ctr": 0.5555555555555556,
+      "cpc": 4.16,
+      "cpl": null
+    },
+    {
+      "keyword": "roofer near me",
+      "matchType": 3,
+      "adGroup": "Roof Repair",
+      "clicks": 3,
+      "impressions": 5,
+      "conversions": 0,
+      "spend": 16.41,
+      "ctr": 0.6,
+      "cpc": 5.47,
+      "cpl": null
+    },
     {
       "keyword": "roofing services",
       "matchType": 4,
@@ -15504,18 +15569,6 @@
       "cpl": null
     },
     {
-      "keyword": "roof leak repair",
-      "matchType": 2,
-      "adGroup": "Roof Repair",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0,
-      "cpl": null
-    },
-    {
       "keyword": "emergency roof repair",
       "matchType": 2,
       "adGroup": "Roof Repair",
@@ -15538,36 +15591,27 @@
       "ctr": 0,
       "cpc": 0,
       "cpl": null
-    },
-    {
-      "keyword": "roof repair near me",
-      "matchType": 2,
-      "adGroup": "Roof Repair",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0,
-      "cpl": null
-    },
-    {
-      "keyword": "roofer near me",
-      "matchType": 3,
-      "adGroup": "Roof Repair",
-      "clicks": 0,
-      "impressions": 0,
-      "conversions": 0,
-      "spend": 0,
-      "ctr": 0,
-      "cpc": 0,
-      "cpl": null
     }
   ],
   "searchTerms": {
-    "waste": [],
-    "wastePct": 0,
-    "wasteSpend": 0
+    "waste": [
+      {
+        "term": "roof leak repairs",
+        "clicks": 4,
+        "spend": 16.89,
+        "campaign": "MR — Search — Roof Repair — May 2026",
+        "adGroup": "Roof Repair"
+      },
+      {
+        "term": "roofing contractors in my area",
+        "clicks": 3,
+        "spend": 8.87,
+        "campaign": "MR — Search — Roof Repair — May 2026",
+        "adGroup": "Roof Repair"
+      }
+    ],
+    "wastePct": 41.3,
+    "wasteSpend": 25.76
   },
   "ads": {
     "disapproved": 0
@@ -15577,18 +15621,33 @@
     "actions": []
   },
   "health": {
-    "score": 45,
+    "score": 35,
     "breakdown": {
       "conversionTracking": 0,
-      "budgetPacing": 0,
+      "budgetPacing": 5,
       "cpl": 10,
-      "searchTermWaste": 15,
+      "searchTermWaste": 0,
       "adApprovals": 10,
       "negativeKeywords": 10
     }
   },
   "alerts": {
-    "wasteTerms": [],
+    "wasteTerms": [
+      {
+        "term": "roof leak repairs",
+        "clicks": 4,
+        "spend": 16.89,
+        "campaign": "MR — Search — Roof Repair — May 2026",
+        "adGroup": "Roof Repair"
+      },
+      {
+        "term": "roofing contractors in my area",
+        "clicks": 3,
+        "spend": 8.87,
+        "campaign": "MR — Search — Roof Repair — May 2026",
+        "adGroup": "Roof Repair"
+      }
+    ],
     "bidOpportunities": [],
     "underperformingAdGroups": []
   }

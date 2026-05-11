@@ -3,110 +3,149 @@
     "platform": "meta",
     "accountId": "1523727968790479",
     "accountName": "LocalEyes Pro — Lead Gen",
-    "weekOf": "2026-04-27",
-    "generatedAt": "2026-05-07T20:09:36.036Z",
+    "weekOf": "2026-05-04",
+    "generatedAt": "2026-05-11T13:49:31.072Z",
     "budget": 500,
     "weeklyBudget": 115.13
   },
   "summary": {
     "thisWeek": {
+      "spend": 108.8,
+      "impressions": 3052,
+      "clicks": 49,
+      "ctr": 1.61,
+      "cpc": 2.22,
+      "leads": 2,
+      "cpl": 54.4
+    },
+    "prevWeek": {
       "spend": 65.47,
       "impressions": 2301,
       "clicks": 26,
-      "ctr": 1.13,
-      "cpc": 2.52,
       "leads": 1,
       "cpl": 65.47
     },
-    "prevWeek": {
-      "spend": 69.01,
-      "impressions": 1566,
-      "clicks": 22,
-      "leads": 2,
-      "cpl": 34.51
-    },
     "delta": {
-      "spend": -3.54,
-      "leads": -1,
-      "cpl": 30.96,
-      "spendPct": -5.13,
-      "leadsPct": -50,
-      "cplPct": 89.74
+      "spend": 43.33,
+      "leads": 1,
+      "cpl": -11.07,
+      "spendPct": 66.18,
+      "leadsPct": 100,
+      "cplPct": -16.91
     },
-    "pacing": 57
+    "pacing": 95
   },
   "daily": [
     {
-      "date": "2026-04-27",
-      "spend": 10.01,
-      "impressions": 312,
-      "clicks": 6,
-      "leads": 0
-    },
-    {
-      "date": "2026-04-28",
-      "spend": 10.79,
-      "impressions": 325,
-      "clicks": 3,
-      "leads": 0
-    },
-    {
-      "date": "2026-04-29",
-      "spend": 12.23,
-      "impressions": 381,
-      "clicks": 8,
-      "leads": 1
-    },
-    {
-      "date": "2026-04-30",
-      "spend": 9.31,
-      "impressions": 430,
-      "clicks": 5,
-      "leads": 0
-    },
-    {
-      "date": "2026-05-01",
-      "spend": 7.69,
-      "impressions": 383,
-      "clicks": 1,
-      "leads": 0
-    },
-    {
-      "date": "2026-05-02",
-      "spend": 5.27,
-      "impressions": 206,
+      "date": "2026-05-04",
+      "spend": 10.93,
+      "impressions": 292,
       "clicks": 2,
       "leads": 0
     },
     {
-      "date": "2026-05-03",
-      "spend": 10.17,
-      "impressions": 264,
-      "clicks": 1,
+      "date": "2026-05-05",
+      "spend": 9.89,
+      "impressions": 245,
+      "clicks": 4,
+      "leads": 0
+    },
+    {
+      "date": "2026-05-06",
+      "spend": 10.28,
+      "impressions": 294,
+      "clicks": 5,
+      "leads": 0
+    },
+    {
+      "date": "2026-05-07",
+      "spend": 13.54,
+      "impressions": 408,
+      "clicks": 9,
+      "leads": 1
+    },
+    {
+      "date": "2026-05-08",
+      "spend": 21.61,
+      "impressions": 777,
+      "clicks": 10,
+      "leads": 1
+    },
+    {
+      "date": "2026-05-09",
+      "spend": 20.51,
+      "impressions": 621,
+      "clicks": 11,
+      "leads": 0
+    },
+    {
+      "date": "2026-05-10",
+      "spend": 22.04,
+      "impressions": 415,
+      "clicks": 8,
       "leads": 0
     }
   ],
   "campaigns": [
     {
-      "name": "Tree Service Anya New",
+      "name": "TOF | Leads | InstantForm (V1)",
       "id": "120242239161050742",
-      "spend": 65.47,
-      "impressions": 2301,
-      "clicks": 26,
+      "spend": 41.03,
+      "impressions": 1125,
+      "clicks": 18,
       "leads": 1,
-      "cpl": 65.47
+      "cpl": 41.03
+    },
+    {
+      "name": "TOF | LEADS | InstantForm (V2)",
+      "id": "120246145114400742",
+      "spend": 67.77,
+      "impressions": 1927,
+      "clicks": 31,
+      "leads": 1,
+      "cpl": 67.77
     }
   ],
   "adsets": [
     {
       "name": "Just FB Ad Set",
       "id": "120242239161060742",
-      "campaign": "Tree Service Anya New",
-      "spend": 65.47,
-      "impressions": 2301,
-      "clicks": 26,
+      "campaign": "TOF | Leads | InstantForm (V1)",
+      "spend": 41.03,
+      "impressions": 1125,
+      "clicks": 18,
       "leads": 1,
-      "cpl": 65.47
+      "cpl": 41.03
+    },
+    {
+      "name": "LAL | 1% | Phone",
+      "id": "120246145114420742",
+      "campaign": "TOF | LEADS | InstantForm (V2)",
+      "spend": 18.34,
+      "impressions": 571,
+      "clicks": 3,
+      "leads": 0,
+      "cpl": 0
+    },
+    {
+      "name": "LAL | 1% | Email",
+      "id": "120246145292750742",
+      "campaign": "TOF | LEADS | InstantForm (V2)",
+      "spend": 21.72,
+      "impressions": 437,
+      "clicks": 10,
+      "leads": 0,
+      "cpl": 0
+    },
+    {
+      "name": "Interest | Tree + Biz",
+      "id": "120246145312660742",
+      "campaign": "TOF | LEADS | InstantForm (V2)",
+      "spend": 27.71,
+      "impressions": 919,
+      "clicks": 18,
+      "leads": 1,
+      "cpl": 27.71
     }
   ],
   "ads": [
@@ -114,12 +153,45 @@
       "name": "New Leads Ad",
       "id": "120242239161070742",
       "adset": "Just FB Ad Set",
-      "campaign": "Tree Service Anya New",
-      "spend": 65.47,
-      "impressions": 2301,
-      "clicks": 26,
+      "campaign": "TOF | Leads | InstantForm (V1)",
+      "spend": 41.03,
+      "impressions": 1125,
+      "clicks": 18,
       "leads": 1,
-      "cpl": 65.47
+      "cpl": 41.03
+    },
+    {
+      "name": "Growth Hook",
+      "id": "120246145114410742",
+      "adset": "LAL | 1% | Phone",
+      "campaign": "TOF | LEADS | InstantForm (V2)",
+      "spend": 18.34,
+      "impressions": 571,
+      "clicks": 3,
+      "leads": 0,
+      "cpl": 0
+    },
+    {
+      "name": "Growth Hook",
+      "id": "120246147207670742",
+      "adset": "Interest | Tree + Biz",
+      "campaign": "TOF | LEADS | InstantForm (V2)",
+      "spend": 27.71,
+      "impressions": 919,
+      "clicks": 18,
+      "leads": 1,
+      "cpl": 27.71
+    },
+    {
+      "name": "Growth Hook",
+      "id": "120246147207680742",
+      "adset": "LAL | 1% | Email",
+      "campaign": "TOF | LEADS | InstantForm (V2)",
+      "spend": 21.72,
+      "impressions": 437,
+      "clicks": 10,
+      "leads": 0,
+      "cpl": 0
     }
   ]
 }
